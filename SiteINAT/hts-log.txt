@@ -1,0 +1,16 @@
+HTTrack3.49-2 launched on Tue, 15 Jan 2019 21:21:21 at http://t.commonsupport.com/woodex/?fbclid=IwAR0Yh2QS9x379sUSX9iFGJrFHw7xqJbjNmscOxFJL3NbWKySYK1JYOBTtxg
+(winhttrack http://t.commonsupport.com/woodex/?fbclid=IwAR0Yh2QS9x379sUSX9iFGJrFHw7xqJbjNmscOxFJL3NbWKySYK1JYOBTtxg -O "/Users/iyadh/websites/SiteINAT" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+21:33:59	Warning: 	File not parsed, looks like binary: t.commonsupport.com/woodex/plugins/revolution/css/openhand.cur
+21:33:59	Warning: 	File not parsed, looks like binary: t.commonsupport.com/woodex/plugins/revolution/css/closedhand.cur
+21:35:01	Error: 	"Not Found" (404) at link t.commonsupport.com/woodex/therapists-single.html (from t.commonsupport.com/woodex/index-2.html)
+21:35:01	Error: 	"Not Found" (404) at link t.commonsupport.com/woodex/css/owl.video.play.png (from t.commonsupport.com/woodex/css/owl.css)
+21:35:01	Error: 	"Not Found" (404) at link t.commonsupport.com/woodex/css/mCSB_buttons.html (from t.commonsupport.com/woodex/css/jquery.mCustomScrollbar.min.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 13 minutes 40 seconds : 271 links scanned, 267 files written (17810031 bytes overall) [15079643 bytes received at 18389 bytes/sec], 3851502 bytes transferred using HTTP compression in 93 files, ratio 25%, 3.3 requests per connection
+(3 errors, 2 warnings, 0 messages)
