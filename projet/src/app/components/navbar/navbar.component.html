@@ -1,3 +1,157 @@
-<p>
-  navbar works!
-</p>
+<header class="main-header header-style-two">
+  <!-- Header Top -->
+  <div class="header-top">
+    <div class="auto-container">
+      <div class="clearfix">
+        <!--Top Left-->
+        <div class="top-left clearfix">
+          <!--social-icon-->
+          <div class="social-icon">
+            <ul class="clearfix">
+              <li>
+                <a href="#"><span class="fa fa-facebook"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-twitter"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-google-plus"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-linkedin"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-instagram"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--Top Right-->
+        <div class="top-right">
+          <ul class="links clearfix">
+            <li>
+              <a href="#"
+                ><span class="icon fa fa-phone"></span>1800.568.3248</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="icon fa fa-envelope-o"></span>info@woodex.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Header Top End -->
+
+  <!-- Main Box -->
+  <div class="main-box">
+    <div class="auto-container">
+      <div class="outer-container clearfix">
+        <!--Logo Box-->
+        <div class="logo-box">
+          <div class="logo">
+            <a href="index.html"><img src="../../../assets/images/logo.png" alt=""/></a>
+          </div>
+        </div>
+
+        <!--Nav Outer-->
+        <div class="nav-outer clearfix">
+          <!-- Main Menu -->
+          <nav class="main-menu">
+            <div class="navbar-header">
+              <!-- Toggle Button -->
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target=".navbar-collapse"
+              >
+                <span class="icon-bar"></span> <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="navbar-collapse collapse clearfix">
+              <ul class="navigation clearfix">
+                <li class="current dropdown">
+                  <a routerLink="/home">Home</a>
+                </li>
+                <li class="dropdown">
+                  <a routerLink="/events">Events</a>
+                </li>
+                <li class="dropdown">
+                  <a routerLink="/projects">Projects</a>
+                </li>
+                <li class="dropdown">
+                  <a routerLink="/formations">Formations</a>
+                </li>
+                <li class="dropdown">
+                  <a routerLink="aboutUs">About Us</a>
+                  <ul>
+                    <li><a routerLink="/structure">Structure</a></li>
+                    <li><a routerLink="sponsors">Sponsors</a></li>
+                    <li><a routerLink="rse">RSE</a></li>
+                  </ul>
+                  <div class="dropdown-btn">
+                    <span class="fa fa-angle-down"></span>
+                  </div>
+                </li>
+                <li><a routerLink="/contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- Main Menu End-->
+
+          <!--Search Box-->
+          <div class="search-box">
+            <!--Search Box-->
+            <div class="dropdown dropdown-outer">
+              <button
+                class="search-box-btn dropdown-toggle"
+                type="button"
+                id="dropdownMenu1"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span class="fa fa-search"></span>
+              </button>
+              <ul
+                class="dropdown-menu pull-right search-panel"
+                aria-labelledby="dropdownMenu1"
+              >
+                <li class="panel-outer">
+                  <div class="form-container">
+                    <form
+                      method="post"
+                      action="http://t.commonsupport.com/woodex/blog.html"
+                    >
+                      <div class="form-group">
+                        <input
+                          type="search"
+                          name="field-name"
+                          value=""
+                          placeholder="Search Here"
+                          required=""
+                        />
+                        <button type="submit" class="search-btn">
+                          <span class="fa fa-search"></span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--Nav Outer End-->
+      </div>
+    </div>
+  </div>
+</header>
+
