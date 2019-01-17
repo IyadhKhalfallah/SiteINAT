@@ -17,13 +17,18 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DetailsEventComponent } from './components/events/details-event/details-event.component';
+import { DetailsProjectComponent } from './components/projects/details-project/details-project.component';
+import { DetailsFormationComponent } from './components/formations/details-formation/details-formation.component';
 
 const routes: Routes = [
   {path: '' , component: HomeComponent},
   {path: 'home' , component: HomeComponent},
   {path: 'projects' , component: ProjectsComponent},
+  {path: 'projects/:id' , component: DetailsProjectComponent},
   {path: 'events' , component: EventsComponent},
+  {path: 'events/:id' , component: DetailsEventComponent},
   {path: 'formations' , component: FormationsComponent},
+  {path: 'formations/:id' , component: DetailsFormationComponent},
   {path: 'contact' , component: ContactComponent},
   {path: 'aboutUs' , component: AboutUsComponent},
   {path: 'sponsors' , component: SponsorsPartenaireComponent},
@@ -48,10 +53,12 @@ const routes: Routes = [
     StructureComponent,
     RseComponent,
     NotFoundComponent,
-    DetailsEventComponent
+    DetailsEventComponent,
+    DetailsProjectComponent,
+    DetailsFormationComponent
   ],
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
     BrowserModule,
     FormsModule
   ],

@@ -1,3 +1,82 @@
-<p>
-  details-event works!
-</p>
+<div class="sidebar-page-container">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Content Side / Our Blog-->
+      <div class="content-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="blog-single padding-right">
+          <!--News Block Three-->
+          <div class="news-block-three style-two">
+            <div class="inner-box">
+              <div class="image">
+                <img
+                  src="../../../../assets/../../../../assets/images/resource/{{image}}"
+                  alt=""
+                />
+              </div>
+              <div class="lower-content">
+                <div class="upper-box clearfix">
+                  <div class="posted-date pull-left">{{date}}</div>
+                  <ul class="post-meta pull-right">
+                    <li>By: </li>
+                    <li *ngFor="let orgonaziedBy of orgonaziedBy">{{orgonaziedBy}}</li>
+                  </ul>
+                </div>
+                <div class="lower-box">
+                  <h3>{{title}}</h3>
+                  <div class="text">
+                    <p>
+                      {{shortDescription}}
+                    </p>
+                    <h4>Two Column Text Sample</h4>
+                    <p>
+                        {{longDescription}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="gallery-section fullwidth-galery">
+          <!--MixitUp Galery-->
+          <div class="mixitup-gallery">
+            <div class="auto-container"></div>
+            <div class="filter-list clearfix" id="MixItUp70F810">
+              <!--Gallery Item Two-->
+              <div
+              *ngFor="let img of gallery"
+                class="gallery-item-two mix all"
+                style="display: inline-block;"
+              >
+                <div class="inner-box">
+                  <figure class="image-box">
+                    <img
+                      src="../../../../assets/images/gallery/{{img}}"
+                      alt=""
+                    />
+                    <!--Overlay Box-->
+                    <div class="overlay-box">
+                      <div class="overlay-inner">
+                        <div class="content">
+                          <a
+                            href="../../../../assets/images/gallery/{{img}}"
+                            data-fancybox-group="example-gallery"
+                            class="link lightbox-image"
+                            ><span class="icon flaticon-search-1"></span
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
