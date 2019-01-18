@@ -13,7 +13,7 @@
       <div class="row clearfix">
           
             <!--News Block Three-->
-            <div *ngFor="let event of events" class="news-block-three col-md-6 col-sm-6 col-xs-12">
+            <div *ngFor="let event of events | paginate: { itemsPerPage: 3, currentPage: p }" class="news-block-three col-md-6 col-sm-6 col-xs-12">
               <div class="inner-box">
                   <div class="image">
                       <a routerLink="/events/{{event.id}}"><img src="../../../assets/images/resource/{{event.image}}" alt=""></a>

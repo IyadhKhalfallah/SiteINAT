@@ -19,6 +19,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DetailsEventComponent } from './components/events/details-event/details-event.component';
 import { DetailsProjectComponent } from './components/projects/details-project/details-project.component';
 import { DetailsFormationComponent } from './components/formations/details-formation/details-formation.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 const routes: Routes = [
   {path: '' , component: HomeComponent},
@@ -58,6 +59,7 @@ const routes: Routes = [
     DetailsFormationComponent
   ],
   imports: [
+    NgxPaginationModule,
     RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
     BrowserModule,
     FormsModule

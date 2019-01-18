@@ -1,3 +1,114 @@
-<p>
-  details-project works!
-</p>
+<div class="sidebar-page-container">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Sidebar Side-->
+      <div class="sidebar-side col-lg-3 col-md-4 col-sm-12 col-xs-12">
+        <aside class="sidebar default-sidebar">
+          <!--Client-->
+          <div class="sidebar-widget brochure-widget">
+            <div class="sidebar-title"><h2>Le Client</h2></div>
+            <div class="brochure-box">
+              <div class="inner">
+                <span class="icon fa fa-file-pdf-o"></span>
+                <div class="text">{{client.doc[0]}}</div>
+              </div>
+              <a href="#" class="overlay-link"></a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget brochure-widget">
+            <div class="brochure-box">
+              <div class="inner">
+                <span class="icon fa fa-file-pdf-o"></span>
+                <div class="text">{{client.doc[1]}}</div>
+              </div>
+              <a href="#" class="overlay-link"></a>
+            </div>
+          </div>
+
+          <!--Contact Widhet-->
+          <div class="sidebar-widget contact-info-widget">
+            <div class="inner-box">
+              <ul>
+                <li>
+                  Phone:<br />
+                  {{client.phone}}
+                </li>
+                <li>
+                  Email:<br />
+                  {{client.email}}
+                </li>
+                <li>
+                  Entreprise:<br />
+                  {{client.entreprise}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!--Content Side-->
+      <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+        <div class="services-single">
+          <div class="inner-box">
+            <div class="image">
+              <img
+                src="../../../../assets/../../../../assets/images/resource/{{image}}"
+                alt=""
+              />
+            </div>
+            <div class="lower-content">
+              <h3>{{title}}</h3>
+              <div class="text">
+                <p>{{ description }}</p>
+              </div>
+              <section class="gallery-section">
+                <div class="auto-container">
+                  <h3>Demo</h3>
+                  <!--MixitUp Galery-->
+                  <div class="mixitup-gallery">
+                    <div class="filter-list row clearfix" id="MixItUpB4E95B">
+                      <!--Gallery Item Two-->
+                      <div
+                        class="gallery-item-two mix all col-lg-4 col-md-4 col-sm-6 col-xs-12"
+                        style="display: inline-block;"
+                        *ngFor="let image of demo"
+                      >
+                        <div class="inner-box">
+                          <figure class="image-box">
+                            <img
+                              src="../../../../assets/images/gallery/{{
+                                image
+                              }}"
+                              alt=""
+                            />
+                            <!--Overlay Box-->
+                            <div class="overlay-box">
+                              <div class="overlay-inner">
+                                <div class="content">
+                                  <a
+                                    href="../../../../assets/images/gallery/{{
+                                      image
+                                    }}"
+                                    data-fancybox-group="example-gallery"
+                                    class="link lightbox-image"
+                                    ><span class="icon flaticon-search-1"></span
+                                  ></a>
+                                </div>
+                              </div>
+                            </div>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

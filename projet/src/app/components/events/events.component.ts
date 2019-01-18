@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
+  p = 1;
   events = [
     // tslint:disable-next-line:max-line-length
     {id: 1, date: new Date().toISOString().split('T')[0], title: 'event1', description: 'desc1', image: 'news-3.jpg', orgonaziedBy: ['JE Insat', 'JE Inat']},

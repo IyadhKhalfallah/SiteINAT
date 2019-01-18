@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsProjectComponent implements OnInit {
 
+  title;
+  client = {phone: 1123, email: '@gmail', entreprise: 'entreprise', doc: ['doc1', 'doc2']};
+  image;
+  description;
+  demo;
+
   constructor() { }
 
   ngOnInit() {
+    this.title = 'proj';
+    this.image  = 'services-15.jpg';
+    this.description = 'description';
+    this.demo = ['11.jpg', '12.jpg', '13.jpg'];
   }
 
 }
