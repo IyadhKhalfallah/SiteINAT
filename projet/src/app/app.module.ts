@@ -20,6 +20,7 @@ import { DetailsEventComponent } from './components/events/details-event/details
 import { DetailsProjectComponent } from './components/projects/details-project/details-project.component';
 import { DetailsFormationComponent } from './components/formations/details-formation/details-formation.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { SliderComponent } from './components/slider/slider.component';
 
 const routes: Routes = [
   {path: '' , component: HomeComponent},
@@ -56,7 +57,8 @@ const routes: Routes = [
     NotFoundComponent,
     DetailsEventComponent,
     DetailsProjectComponent,
-    DetailsFormationComponent
+    DetailsFormationComponent,
+    SliderComponent
   ],
   imports: [
     NgxPaginationModule,

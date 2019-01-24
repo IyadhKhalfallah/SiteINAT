@@ -52,7 +52,6 @@
 			
 			var outerBox = $(this).parents('.accordion-box');
 			var target = $(this).parents('.accordion');
-			
 			if($(this).hasClass('active')!==true){
 				$(outerBox).find('.accordion .acc-btn').removeClass('active');
 			}
@@ -68,6 +67,7 @@
 			}
 		});	
 	}
+
 	
 	
 	//Product Tabs
