@@ -24,7 +24,7 @@
 }
 
 .color-palate-head {
-    background: #c08c4d none repeat scroll 0 0;
+    background: #f3ce44 none repeat scroll 0 0;
     padding: 12px 0;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .palate.default-color {
-    background: #c08c4d none repeat scroll 0 0;
+    background: #f3ce44 none repeat scroll 0 0;
 }
 
 .palate.teal-color {
@@ -127,7 +127,7 @@
 }
 
 .color-trigger {
-    background: #c08c4d none repeat scroll 0 0;
+    background: #f3ce44 none repeat scroll 0 0;
     cursor: pointer;
     height: 50px;
     right: -46px;

@@ -471,11 +471,11 @@
 	.main-menu .navbar-header .navbar-toggle{
 		display:inline-block;
 		z-index:12;
-		border:1px solid #c08c4d;
+		border:1px solid #f3ce44;
 		float:none;
 		margin:-2px 0px 0px 0px;
 		border-radius:0px;
-		background:#c08c4d;
+		background:#f3ce44;
 	}
 	
 	.main-menu .navbar-header .navbar-toggle .icon-bar{
@@ -591,7 +591,7 @@
 	.main-menu .navbar-collapse > .navigation > li > a:hover,
 	.main-menu .navbar-collapse > .navigation > li > a:active,
 	.main-menu .navbar-collapse > .navigation > li > a:focus{
-		background:#c08c4d;
+		background:#f3ce44;
 	}
 	
 	.main-menu .navbar-collapse > .navigation > li:hover > a,
