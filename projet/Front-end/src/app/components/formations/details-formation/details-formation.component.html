@@ -1,3 +1,83 @@
-<p>
-  details-formation works!
-</p>
+<div class="sidebar-page-container">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Content Side-->
+      <div class="content-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="services-single">
+          <div class="inner-box">
+            <div class="image">
+              <img
+                src="../../../../assets/../../../../assets/images/formations/affiche/{{image}}"
+                alt=""
+              />
+            </div>
+            <div class="lower-content">
+              <h3>{{title}}</h3>
+              <div class="text">
+                <p>{{ description }}</p>
+              </div>
+
+              <h3>Prérequis</h3>
+              <div class="text">
+                <p>Forte volonté de s’impliquer personnellement et émotionnellement dans cette formation pour en tirer les meilleurs bénéfices.</p>
+              </div>
+
+              <h3>Le programme de la formation</h3>
+              <div class="text">
+                <p>En amont, un autodiagnostic pour se situer et définir ses priorités <br>
+                  1 - Évaluer ses modes de fonctionnement face au stress <br>
+                  2 - Apprendre à se détendre intellectuellement, physiquement et émotionnellement <br>
+                  3 - Sortir de la passivité et agir positivement <br>
+                  4 - Renforcer la confiance en soi <br>
+                  5 - Définir et mettre en œuvre sa stratégie de réussite</p>
+              </div>
+
+              <section class="gallery-section">
+                <div class="auto-container">
+                  <h3>Photos</h3>
+                  <!--MixitUp Galery-->
+                  <div class="mixitup-gallery">
+                    <div class="filter-list row clearfix" id="MixItUpB4E95B">
+                      <!--Gallery Item Two-->
+                      <div
+                        class="gallery-item-two mix all col-lg-4 col-md-4 col-sm-6 col-xs-12"
+                        style="display: inline-block;"
+                        *ngFor="let image of demo"
+                      >
+                        <div class="inner-box">
+                          <figure class="image-box">
+                            <img
+                            src="../../../../assets/images/formations/gallery/{{
+                              image
+                            }}"
+                              alt=""
+                            />
+                            <!--Overlay Box-->
+                            <div class="overlay-box">
+                              <div class="overlay-inner">
+                                <div class="content">
+                                  <a
+                                    href="../../../../assets/images/formations/gallery/{{
+                                      image
+                                    }}"
+                                    data-fancybox-group="example-gallery"
+                                    class="link lightbox-image"
+                                    ><span class="icon flaticon-search-1"></span
+                                  ></a>
+                                </div>
+                              </div>
+                            </div>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

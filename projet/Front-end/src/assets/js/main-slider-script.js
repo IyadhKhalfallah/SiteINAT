@@ -1,4 +1,3 @@
-
 	var tpj=jQuery;                  
     var revapi486;
     tpj(document).ready(function() {

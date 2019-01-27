@@ -5,12 +5,12 @@
   <div class="auto-container" style=" ">
     <!--Sec Title-->
     <div style="margin-bottom: -5rem" class="sec-title-two"><h2>Our Latest Projects</h2></div>
-    <section  class="services-section-two" style="background-image:url(images/resource/image-2.png)">
+    <section  class="services-section-two" >
       <div class="auto-container">
           <!--Services Title-->
             <div class="services-title clearfix">
                 <h2>We are woodex offer any posible carpentry and carpentry administrations you may require. we finding the correct answer for each circumstance.</h2>
-                <a routerLink="/projects" class="services-link">View all projects</a>
+                <a routerLink="/projects" class="services-link">Lire tous les project</a>
             </div>
             <div class="row clearfix">            
             </div>
@@ -122,10 +122,10 @@
     <!--Content Column-->
     <div class="content-column">
       <div class="inner-box">
-        <h2>Why Choose Us</h2>
+        <h2>Nos Volets</h2>
         <div class="column-text">
-          Lorem ismod tincidunt ut lao ipsum dolor sit amet, consectetuer elit,
-          sed diam nonummy nibh euismod tincidunt ut.
+          L'INAT Junior Entreprise fonctionne sur le modèle d'une entreprise à services agronomiques. 
+         <br> Notre stratégie repose sur trois volets principaux, à savoir :
         </div>
 
         <!--Accordian Box-->
@@ -166,7 +166,7 @@
           <div *ngFor="let event of events" class="news-block col-md-4 col-sm-4 col-xs-12">
             <div class="inner-box">
               <div class="image">
-                <img src="../../../assets/images/resource/{{event.img}}" alt="" />
+                <img src="../../../assets/images/events/{{event.img}}" alt="" />
                 <a routerLink="/events/{{event.id}}" class="overlay-link"></a>
               </div>
               <div class="lower-box">
@@ -181,7 +181,7 @@
                 <div class="text">
                   {{event.description}}
                 </div>
-                <a routerLink="/events/{{event.id}}" class="read-more">Read more</a>
+                <a routerLink="/events/{{event.id}}" class="read-more">Lire la suite</a>
               </div>
             </div>
           </div>
@@ -220,7 +220,7 @@
   <div class="auto-container">
     <!--Services Title-->
     <div class="services-title">
-      <div class="title">Welcome to our workshop</div>
+      <div class="title">Bienvenue dans nos formations</div>
       <h2>
         We offer administration Indoor and open air, business or local. We are
         woodex offer any posible carpentry and carpentry administrations you may
@@ -232,17 +232,17 @@
       <div *ngFor="let formation of formations" class="services-block col-md-3 col-sm-6 col-xs-12">
         <div class="inner-box">
           <div class="image">
-            <a routerLink="formations/{{formation.id}}"
-              ><img src="../../../assets/images/resource/{{formation.img}}" alt=""
+            <a routerLink="/formations/{{formation.id}}"
+              ><img src="../../../assets/images/formations/affiche/{{formation.img}}" alt=""
             /></a>
           </div>
-          <h3><a routerLink="formations/{{formation.id}}">{{formation.name}}</a></h3>
+          <h3><a routerLink="/formations/{{formation.id}}">{{formation.name}}</a></h3>
         </div>
       </div>
     </div>
     <div class="btn-box text-center">
       <a routerLink="/formations" class="theme-btn btn-style-four"
-        >view all formations</a
+        >Lire tous les formations</a
       >
     </div>
   </div>

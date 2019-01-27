@@ -6,11 +6,12 @@ import { Injectable } from '@angular/core';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = 'http://localhost:8080/projects';
+const apiUrl = 'http://localhost:8080/entreprises';
+
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectsService {
+export class EntreprisesService {
 
   constructor(private http: HttpClient) { }
 
@@ -25,7 +26,7 @@ export class ProjectsService {
         `Backend returned code ${error.status}, ` +
         `body was: ${error.error}`);
     }
-    // return an observable with a Projet-facing error message
+    // return an observable with a Entreprise-facing error message
     return throwError('Something bad happened; please try again later.');
   }
 
@@ -34,33 +35,33 @@ export class ProjectsService {
     return body || { };
   }
 
-  getProjets(): Observable<any> {
+  getEntreprises(): Observable<any> {
     return this.http.get(apiUrl, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
-  getProjet(id: string): Observable<any> {
+  getEntreprise(id: string): Observable<any> {
     const url = `${apiUrl}/${id}`;
     return this.http.get(url, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
-  postProjet(data): Observable<any> {
+  postEntreprise(data): Observable<any> {
     return this.http.post(apiUrl, data, httpOptions).pipe(
       catchError(this.handleError)
     );
   }
 
-  updateProjet(data, id): Observable<any> {
+  updateEntreprise(data, id): Observable<any> {
     return this.http.put(`${apiUrl}/${id}`, data, httpOptions)
       .pipe(
         catchError(this.handleError)
       );
   }
 
-  deleteProjet(id: string): Observable<{}> {
+  deleteEntreprise(id: string): Observable<{}> {
     const url = `${apiUrl}/${id}`;
     return this.http.delete(url, httpOptions)
       .pipe(

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = 'http://localhost:3000/api/formations';
+const apiUrl = 'http://localhost:8080/trainings';
 
 @Injectable({
   providedIn: 'root'

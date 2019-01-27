@@ -1,4 +1,4 @@
-<section class="page-title" style="background-image:url(../../../assets/images/background/6.jpg)">
+<section class="page-title" style="background-image:url(../../../assets/images/events/Background.jpg)">
   <div class="auto-container">
       <h1>ÉVÉNEMENTS</h1>
         <ul class="page-breadcrumb">
@@ -16,7 +16,7 @@
             <div *ngFor="let event of events | paginate: { itemsPerPage: 3, currentPage: p }" class="news-block-three col-md-6 col-sm-6 col-xs-12">
               <div class="inner-box">
                   <div class="image">
-                      <a routerLink="/events/{{event.id}}"><img src="../../../assets/images/resource/{{event.image}}" alt=""></a>
+                      <a routerLink="/events/{{event.id}}"><img src="../../../assets/images/events/{{event.image}}" alt=""></a>
                     </div>
                     <div class="lower-content">
                       <div class="upper-box">

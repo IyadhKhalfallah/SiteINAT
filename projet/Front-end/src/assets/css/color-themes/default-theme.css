@@ -50,7 +50,7 @@ a,
 .news-block-three .inner-box .lower-content .lower-box h3 a:hover,
 .news-block-three .inner-box .lower-content .upper-box .posted-date,
 .gallery-section .filters .filter.active, .gallery-section .filters .filter:hover{
-	color:#f3ce44;
+	color:#Daa520;
 }
 
 /*Background Color*/
@@ -93,7 +93,7 @@ a,
 .styled-pagination li a:hover, .styled-pagination li a.active,
 .shop-single .product-details .prod-tabs .tab-btns .tab-btn:before,
 .shop-single .product-details .prod-tabs .tab-btns .tab-btn{
-	background-color:#f3ce44;
+	background-color:#Daa520;
 }
 
 
@@ -138,7 +138,7 @@ a,
 .shop-comment-form .form-group textarea:focus,
 .shop-form input:focus, .shop-form select:focus, .shop-form textarea:focus,
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{
-	border-color:#f3ce44;
+	border-color:#Daa520;
 }
 
 /*RGBA Color Light*/
@@ -154,7 +154,7 @@ a,
 @media only screen and (max-width: 767px){
 	
 	.main-menu .navbar-header .navbar-toggle{
-		border-color:#f3ce44;
+		border-color:#Daa520;
 	}
 	
 	.main-menu .navbar-header .navbar-toggle,
@@ -173,7 +173,7 @@ a,
 	.main-menu .navbar-collapse > .navigation > li.current > a,
 	.main-menu .navbar-collapse > .navigation > li.current-menu-item > a,
 	.header-style-two.inner-header .main-menu .navigation > li > a{
-		background-color:#f3ce44;
+		background-color:#Daa520;
 	}
 	
 }

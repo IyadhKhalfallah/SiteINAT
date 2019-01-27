@@ -1,3 +1,32 @@
-<p>
-  formations works!
-</p>
+<section class="page-title" style="background-image:url(../../../assets/images/formations/Background.jpg)">
+  <div class="auto-container">
+      <h1>FORMATIONS</h1>
+        <ul class="page-breadcrumb">
+          <li><a routerLink="/home">Accueil</a></li>
+            <li>Formations</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="services-page-section">
+  <div class="auto-container">
+
+        <div class="row clearfix">          
+            <!--Services Block Five-->
+            <div *ngFor="let formation of formations" class="services-block-five col-md-4 col-sm-6 col-xs-12">
+              <div class="inner-box">
+                  <div class="image">
+                      <img src="../../../assets/images/formations/affiche/{{formation.image}}" alt="">
+                        <div class="overlay">
+                          <a routerLink="/formations/{{formation.id}}" class="theme-btn btn-style-two">Lire la suite</a>
+                        </div>
+                    </div>
+                    <div class="lower-box">
+                      <h3><a routerLink="/formations/{{formation.id}}">{{formation.title}}</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
