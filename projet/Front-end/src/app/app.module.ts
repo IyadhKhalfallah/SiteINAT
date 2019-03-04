@@ -21,6 +21,7 @@ import { DetailsProjectComponent } from './components/projects/details-project/d
 import { DetailsFormationComponent } from './components/formations/details-formation/details-formation.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { SliderComponent } from './components/slider/slider.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {path: '' , component: HomeComponent},
@@ -64,7 +65,8 @@ const routes: Routes = [
     NgxPaginationModule,
     RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

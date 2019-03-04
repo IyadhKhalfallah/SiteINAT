@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormationsService } from 'src/app/services/formations.service';
 
 @Component({
   selector: 'app-details-formation',
@@ -12,7 +13,7 @@ export class DetailsFormationComponent implements OnInit {
   description;
   demo;
 
-  constructor() { }
+  constructor(private formationService: FormationsService) { }
 
   ngOnInit() {
     this.title = 'Stress Management';

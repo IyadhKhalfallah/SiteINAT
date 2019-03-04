@@ -17,7 +17,6 @@ export class DetailsProjectComponent implements OnInit {
 
   ngOnInit() {
     this.title = 'proj';
-    this.image  = 'services-15.jpg';
     this.description = 'description';
     this.demo = ['11.jpg', '12.jpg', '13.jpg'];
   }

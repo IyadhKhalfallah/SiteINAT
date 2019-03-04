@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectsService } from 'src/app/services/projects.service';
+import { PhotosService } from 'src/app/services/photos.service';
 
 @Component({
   selector: 'app-projects',
@@ -7,16 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects = [
-    {id: 1,  title: 'project1', image: 'services-11.jpg'},
-    {id: 2,  title: 'project2', image: 'services-12.jpg'},
-    {id: 3,  title: 'project3', image: 'services-7.jpg'},
-    {id: 4,  title: 'project4', image: 'services-8.jpg'}
-  ];
+  projects = [];
 
-  constructor() { }
+  constructor(private projectService: ProjectsService, private photoService: PhotosService) { }
 
   ngOnInit() {
+    this.projectService.getProjets().subscribe(data => {
+      if (data) {
+        data.forEach(element => {
+          this.photoService
+            .getProjetsPhotos(element.projectid)
+            .subscribe(photos => {
+              const project = {
+                id: element.projectid,
+                title: element.name,
+                image: photos[0].path
+              };
+              this.projects.push(project);
+            });
+        });
+      }
+    });
   }
 
 }
