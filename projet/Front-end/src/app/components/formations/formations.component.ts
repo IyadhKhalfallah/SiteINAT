@@ -8,9 +8,7 @@ import { PhotosService } from 'src/app/services/photos.service';
   styleUrls: ['./formations.component.css']
 })
 export class FormationsComponent implements OnInit {
-  formations = [
-    { id: 1, title: 'Stress Management', image: 'stress-management.jpg' }
-  ];
+  formations = [];
   constructor(
     private formationService: FormationsService,
     private photoService: PhotosService
@@ -23,12 +21,18 @@ export class FormationsComponent implements OnInit {
           this.photoService
             .getFormationsPhotos(element.eventid)
             .subscribe(photos => {
-              const formation = {
-                id: element.eventid,
-                title: element.name,
-                image: photos[1].path
-              };
-              this.formations.push(formation);
+              const a = photos.find(
+                el =>
+                  el.path.substr(1, el.path.indexOf('.') - 1) === element.name
+              );
+              if (a) {
+                const formation = {
+                  id: element.eventid,
+                  title: element.name,
+                  image: a.path
+                };
+                this.formations.push(formation);
+              }
             });
         });
       }
