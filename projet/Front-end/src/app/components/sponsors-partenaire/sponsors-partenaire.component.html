@@ -1,48 +1,57 @@
-<link href="../../../assets/css/bootstrap.css" rel="stylesheet">
-<link href="../../../assets/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
-<link href="../../../assets/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
-<link href="../../../assets/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
-<link href="../../../assets/css/style.css" rel="stylesheet">
-<link href="../../../assets/css/responsive.css" rel="stylesheet">
 
-<!--Clients Section-->
-<section class="clients-section-two" style="background-image:url(../../../assets/images/background/4.jpg)">
+<!--Page Title-->
+<section class="page-title" style="background-image:url(../../../assets/images/background/3.jpg)">
   <div class="auto-container">
-
-    <div class="sponsors-outer">
-      <!--Sponsors Carousel-->
-      <ul class="sponsors-carousel owl-carousel owl-theme">
-        <li class="slide-item"><figure class="image-box"><a href="#"><img src="../../../assets/images/clients/5.png" alt=""></a></figure></li>
-        <li class="slide-item"><figure class="image-box"><a href="#"><img src="../../../assets/images/clients/6.png" alt=""></a></figure></li>
-        <li class="slide-item"><figure class="image-box"><a href="#"><img src="../../../assets/images/clients/7.png" alt=""></a></figure></li>
-        <li class="slide-item"><figure class="image-box"><a href="#"><img src="../../../assets/images/clients/8.png" alt=""></a></figure></li>
-        <li class="slide-item"><figure class="image-box"><a href="#"><img src="../../../assets/images/clients/5.png" alt=""></a></figure></li>
-        <li class="slide-item"><figure class="image-box"><a href="#"><img src="../../../assets/images/clients/6.png" alt=""></a></figure></li>
-      </ul>
-    </div>
-
+    <h1>Sponsors et Partenaires</h1>
+    <ul class="page-breadcrumb">
+      <li><a href="../../../index.html">Home</a></li>
+      <li>Sponsors et Partenaires</li>
+    </ul>
   </div>
 </section>
-<!--End Clients Section-->
+<!--End Page Title-->
+
+<!--Clients Section-->
+  <section class="services-section-two" >
+    <div class="auto-container">
+      <!--Services Title-->
+      <div class="services-title clearfix">
+        <div class="title" >Nos sponsors:</div>
+        <h2>We are woodex offer any posible carpentry and carpentry administrations you may require. we finding the correct answer for each circumstance.</h2>
+        <div class="text">sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </div>
+      </div>
+      <div class="row clearfix">
+
+        <!--Services Block Two-->
+        <div *ngFor="let sponsor of sponsors" class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="inner-box">
+            <div class="image" >
+              <img src="../../../assets/images/clients/{{sponsor.image}}" alt="">
+            </div>
+            <h3>{{sponsor.name}}</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-title clearfix">
+        <div class="title">Nos partenaires:</div>
+        <h2>We are woodex offer any posible carpentry and carpentry administrations you may require. we finding the correct answer for each circumstance.</h2>
+      </div>
+    </div>
+    <div class="row clearfix">
+
+      <!--Services Block Two-->
+      <div *ngFor="let partner of partners" class="services-block-three col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="inner-box">
+          <div class="image" >
+            <img src="../../../assets/images/clients/{{partner.image}}" alt="">
+          </div>
+          <h3>{{partner.name}}</h3>
+        </div>
+      </div>
+    </div>
 
 
-<script src="../../../assets/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="../../../assets/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="../../../assets/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="../../../assets/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="../../../assets/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="../../../assets/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="../../../assets/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="../../../assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="../../../assets/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="../../../assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="../../../assets/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script src="../../../assets/js/main-slider-script.js"></script>
+  </section>
+  <!--End Services Section Two-->
 
-<script src="../../../assets/js/bootstrap.min.js"></script>
-<script src="../../../assets/js/jquery.fancybox.pack.js"></script>
-<script src="../../../assets/js/jquery.fancybox-media.js"></script>
-<script src="../../../assets/js/owl.js"></script>
-<script src="../../../assets/js/wow.js"></script>
-<script src="../../../assets/js/appear.js"></script>
-<script src="../../../assets/js/script.js"></script>
