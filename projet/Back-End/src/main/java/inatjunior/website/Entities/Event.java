@@ -22,6 +22,8 @@ public class Event {
     private String name;
 
     @Setter
+    @Column(columnDefinition = "TEXT", length=65535)
+    @org.hibernate.annotations.Type( type = "text" )
     private String description;
 
     @Setter
@@ -33,16 +35,27 @@ public class Event {
     @Setter
     private String place;
 
-    public Event(String name, String description, Date opening, Date closing, String place) {
+    @Setter
+    @Column(columnDefinition = "TEXT", length=65535)
+    @org.hibernate.annotations.Type( type = "text" )
+    private String program;
+
+    public Event(String name, String description, Date opening, Date closing, String place, String program) {
         this.name = name;
         this.description = description;
         this.opening = opening;
         this.closing = closing;
         this.place = place;
+        this.program = program;
     }
 
     @OneToMany(mappedBy = "event")
     @LazyCollection(LazyCollectionOption.FALSE)
     @JsonIgnore
     List<Organizer> organizers = new ArrayList();
+
+    @OneToMany(mappedBy = "event")
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @JsonIgnore
+    private List<EventPhoto> eventphotos = new ArrayList();
 }

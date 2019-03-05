@@ -18,19 +18,13 @@ public class TrainingBusiness {
     @Autowired
     MemberRepository memberRepository;
 
-    public Training createTraining(String name, String description, Date opening, Date closing, String place, String goals, String prerequisites, String equipment, Member member){
-        Training tr1 = new Training(name,description,opening,closing,place,goals,prerequisites,equipment);
-        try {
+    public Training createTraining(String name, String description, Date opening, Date closing, String place, String program, String goals, String prerequisites, String equipment){
+        Training tr1 = new Training(name,description,opening,closing,place,program,goals,prerequisites,equipment);
             trainingRepository.save(tr1);
-            trainerRepository.save(new Trainer(new TrainerKey(member.getMemberid(),tr1.getEventid()),tr1,member));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         return tr1;
     }
 
     public void deleteTraining(Training tr1){
-        try {
             List<Trainer> trainers = this.getTrainers(tr1);
             Iterator<Trainer> iter = trainers.iterator();
             while (iter.hasNext()) {
@@ -40,53 +34,21 @@ public class TrainingBusiness {
             }
             Training tr2 = trainingRepository.getOne(tr1.getEventid());
             trainingRepository.delete(tr2);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public Training getTraining(Long id){
-        try {
             return trainingRepository.getOne(id);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
     public void addTrainer (Training tr1, Member member){
-        try {
             trainerRepository.save(new Trainer(new TrainerKey(member.getMemberid(),tr1.getEventid()),tr1,member));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public void removeTrainer(Training tr1, Member member){
-        try {
             trainerRepository.delete(new Trainer(new TrainerKey(member.getMemberid(),tr1.getEventid()),tr1,member));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void printTrainers(Training tg){
-        try {
-            System.out.println("Trainers :");
-            List<Trainer> trainers = this.getTrainers(tg);
-            Iterator<Trainer> iter=trainers.iterator();
-            while (iter.hasNext())
-            {
-                Trainer t = iter.next();
-                System.out.println(t.getId().getMemberId());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public List<Trainer> getTrainers(Training tg){
-        try {
             List<Trainer> all = trainerRepository.findAll();
             List<Trainer> the = new ArrayList<>();
             Iterator<Trainer> it = all.iterator();
@@ -96,26 +58,19 @@ public class TrainingBusiness {
                     the.add(t);
             }
             return the;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
-    public Training updateTraining(Training t,String name, String description, Date opening, Date closing, String place, String goals, String prerequisites, String equipment){
-        try {
+    public Training updateTraining(Training t,String name, String description, Date opening, Date closing, String place, String program, String goals, String prerequisites, String equipment){
             t.setName(name);
             t.setDescription(description);
             t.setOpening(opening);
             t.setClosing(closing);
             t.setPlace(place);
+            t.setProgram(program);
             t.setGoals(goals);
             t.setPrerequisites(prerequisites);
             t.setEquipment(equipment);
             trainingRepository.save(t);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         return t;
     }
 
@@ -124,7 +79,6 @@ public class TrainingBusiness {
     }
 
     public List<Member> getTrainers1(Training tg){
-        try {
             List<Trainer> all = trainerRepository.findAll();
             List<Member> the = new ArrayList<>();
             Iterator<Trainer> it = all.iterator();
@@ -134,10 +88,6 @@ public class TrainingBusiness {
                     the.add(t.getMember());
             }
             return the;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
 }

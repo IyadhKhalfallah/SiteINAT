@@ -30,22 +30,23 @@ public class Member {
     @Setter
     private Long phone;
 
-    public Member(String name, String family, String email, Long phone) {
+    @Setter
+    private String job;
+
+    @Setter
+    private String quote;
+
+    @Setter
+    private boolean office;
+
+    public Member(String name, String family, String email, Long phone, String job, String quote, boolean office) {
         this.name = name;
         this.family = family;
         this.email = email;
         this.phone = phone;
-    }
-
-    @Override
-    public String toString() {
-        return "Member{" +
-                "memberid=" + memberid +
-                ", name='" + name + '\'' +
-                ", family='" + family + '\'' +
-                ", email='" + email + '\'' +
-                ", phone=" + phone +
-                '}';
+        this.job = job;
+        this.quote = quote;
+        this.office=office;
     }
 
     @OneToMany(mappedBy = "member")
@@ -57,4 +58,9 @@ public class Member {
     @LazyCollection(LazyCollectionOption.FALSE)
     @JsonIgnore
     List<Organizer> organizers = new ArrayList();
+
+    @OneToMany(mappedBy = "member")
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @JsonIgnore
+    private List<MemberPhoto> memberphotos = new ArrayList();
 }
