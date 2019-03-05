@@ -63,7 +63,7 @@
               <div class="text">
                 <p>{{ description }}</p>
               </div>
-              <section class="gallery-section">
+              <section *ngIf="demo" class="gallery-section">
                 <div class="auto-container">
                   <h3>Demo</h3>
                   <!--MixitUp Galery-->
@@ -78,7 +78,7 @@
                         <div class="inner-box">
                           <figure class="image-box">
                             <img
-                              src="../../../../assets/images/gallery/{{
+                              src="../../../../assets/images/projets/gallery{{
                                 image
                               }}"
                               alt=""
@@ -88,7 +88,7 @@
                               <div class="overlay-inner">
                                 <div class="content">
                                   <a
-                                    href="../../../../assets/images/gallery/{{
+                                    href="../../../../assets/images/projets/gallery{{
                                       image
                                     }}"
                                     data-fancybox-group="example-gallery"

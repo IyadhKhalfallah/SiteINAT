@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormationsService } from 'src/app/services/formations.service';
+import { ActivatedRoute } from '@angular/router';
+import { PhotosService } from 'src/app/services/photos.service';
 
 @Component({
   selector: 'app-details-formation',
@@ -11,16 +13,36 @@ export class DetailsFormationComponent implements OnInit {
   title;
   image;
   description;
-  demo;
+  gallery = [];
+  programme;
 
-  constructor(private formationService: FormationsService) { }
+  constructor(private formationService: FormationsService, private route: ActivatedRoute, private photoService: PhotosService) { }
 
   ngOnInit() {
-    this.title = 'Stress Management';
-    this.image  = 'stress-management.jpg';
-    // tslint:disable-next-line:max-line-length
-    this.description = 'Appliquer sa stratégie de gestion du stress dans la durée. Mieux gérer ses émotions en situations de stress. Faire appel à ses ressources individuelles. Récupérer rapidement.';
-    this.demo = ['stressManagement1.jpg', 'stressManagement2.jpg'];
+    this.route.params.subscribe(params => {
+      this.formationService.getFormation(params['id']).subscribe(data => {
+        if (data) {
+            this.photoService
+              .getFormationsPhotos(params['id'])
+              .subscribe(photos => {
+                photos.forEach(element => {
+                  this.gallery.push(element.path);
+                });
+                this.gallery.shift();
+                console.log(this.gallery);
+                const a = photos.find(
+                  el =>
+                    el.path.substr(1, el.path.indexOf('.') - 1) === data.name
+                );
+                if (a) {
+                  this.title = data.name;
+                  this.image = a.path;
+                  this.description = data.description;
+                }
+              });
+        }
+      });
+   });
   }
 
 }

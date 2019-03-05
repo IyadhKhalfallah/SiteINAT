@@ -41,30 +41,30 @@ export class ProjectsService {
   }
 
   getProjet(id: string): Observable<any> {
-    const url = `${apiUrl}/${id}`;
+    const url = 'http://localhost:8080/project/' + id;
     return this.http.get(url, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
-  postProjet(data): Observable<any> {
-    return this.http.post(apiUrl, data, httpOptions).pipe(
-      catchError(this.handleError)
-    );
-  }
+  // postProjet(data): Observable<any> {
+  //   return this.http.post(apiUrl, data, httpOptions).pipe(
+  //     catchError(this.handleError)
+  //   );
+  // }
 
-  updateProjet(data, id): Observable<any> {
-    return this.http.put(`${apiUrl}/${id}`, data, httpOptions)
-      .pipe(
-        catchError(this.handleError)
-      );
-  }
+  // updateProjet(data, id): Observable<any> {
+  //   return this.http.put(`${apiUrl}/${id}`, data, httpOptions)
+  //     .pipe(
+  //       catchError(this.handleError)
+  //     );
+  // }
 
-  deleteProjet(id: string): Observable<{}> {
-    const url = `${apiUrl}/${id}`;
-    return this.http.delete(url, httpOptions)
-      .pipe(
-        catchError(this.handleError)
-      );
-  }
+  // deleteProjet(id: string): Observable<{}> {
+  //   const url = `${apiUrl}/${id}`;
+  //   return this.http.delete(url, httpOptions)
+  //     .pipe(
+  //       catchError(this.handleError)
+  //     );
+  // }
 }
