@@ -32,11 +32,11 @@
                   5 - Définir et mettre en œuvre sa stratégie de réussite</p>
               </div>
 
-              <section *ngIf="gallery" class="gallery-section">
+              <section *ngIf="gallery.length > 0" class="gallery-section">
                 <div class="auto-container">
                   <h3>Photos</h3>
                   <!--MixitUp Galery-->
-                  <div *ngFor="let image of gallery" class="mixitup-gallery">
+                  <div  class="mixitup-gallery">
                     <div class="filter-list row clearfix" id="MixItUpB4E95B">
                       <!--Gallery Item Two-->
                       <div

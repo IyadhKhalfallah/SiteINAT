@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailsProjectComponent implements OnInit {
 
   title;
-  client = {phone: 1123, email: '@gmail', entreprise: 'entreprise', doc: ['doc1', 'doc2']};
+  client = {};
   image;
   description;
   demo = [];
@@ -28,6 +28,10 @@ export class DetailsProjectComponent implements OnInit {
                 photos.forEach(element => {
                   this.demo.push(element.path);
                 });
+                  console.log(data);
+                  this.client = {
+                    phone: data.client.phone, email: data.client.email, entreprise: data.client.name
+                  };
                   this.title = data.name;
                   this.description = data.description;
 

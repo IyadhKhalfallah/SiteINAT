@@ -25,9 +25,11 @@ export class DetailsFormationComponent implements OnInit {
             this.photoService
               .getFormationsPhotos(params['id'])
               .subscribe(photos => {
+                if (this.gallery.length === 0) {
                 photos.forEach(element => {
                   this.gallery.push(element.path);
                 });
+              }
                 this.gallery.shift();
                 console.log(this.gallery);
                 const a = photos.find(
