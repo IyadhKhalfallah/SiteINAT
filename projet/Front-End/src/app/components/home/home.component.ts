@@ -10,7 +10,7 @@ import { FormationsService } from 'src/app/services/formations.service';
 })
 export class HomeComponent implements OnInit {
   projects = [];
-
+  formations = [];
   events = [
     // tslint:disable-next-line:max-line-length
     {
@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit {
     { nb: 121, title: 'title4' }
   ];
 
-  formations = [];
 
   values = [
     {
@@ -73,7 +72,6 @@ export class HomeComponent implements OnInit {
               };
               this.projects.push(project);
             });
-          console.log(this.projects);
         }
       }
     });
@@ -98,6 +96,7 @@ export class HomeComponent implements OnInit {
               }
             });
         }
+        console.log(this.formations);
       }
     });
   }

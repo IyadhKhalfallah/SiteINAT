@@ -28,7 +28,6 @@ export class DetailsProjectComponent implements OnInit {
                 photos.forEach(element => {
                   this.demo.push(element.path);
                 });
-                  console.log(data);
                   this.client = {
                     phone: data.client.phone, email: data.client.email, entreprise: data.client.name
                   };
