@@ -2,10 +2,10 @@
 <!--Page Title-->
 <section class="page-title" style="background-image:url(../../../assets/images/background/3.jpg)">
   <div class="auto-container">
-    <h1>Sponsors et Partenaires</h1>
+    <h1>Sponsors et Partenaires Media</h1>
     <ul class="page-breadcrumb">
       <li><a href="../../../index.html">Home</a></li>
-      <li>Sponsors et Partenaires</li>
+      <li>Sponsors et Partenaires Media</li>
     </ul>
   </div>
 </section>
@@ -16,7 +16,7 @@
     <div class="auto-container">
       <!--Services Title-->
       <div class="services-title clearfix">
-        <div class="title" >Nos sponsors:</div>
+          <div class="title">Nos sponsors:</div>
         <h2>We are woodex offer any posible carpentry and carpentry administrations you may require. we finding the correct answer for each circumstance.</h2>
         <div class="text">sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </div>
       </div>
@@ -25,30 +25,57 @@
         <!--Services Block Two-->
         <div *ngFor="let sponsor of sponsors" class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="inner-box">
-            <div class="image" >
-              <img src="../../../assets/images/clients/{{sponsor.image}}" alt="">
+            <div class="image" align="center" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" data-width="300">
+              <img align="center"  src="../../../assets/images/S/{{sponsor.image}}" alt="" height="100px">
             </div>
-            <h3>{{sponsor.name}}</h3>
+            <h3><br>{{sponsor.name}}<br></h3>
           </div>
         </div>
       </div>
 
       <div class="services-title clearfix">
-        <div class="title">Nos partenaires:</div>
+        <div class="title">Nos partenaires Media:</div>
         <h2>We are woodex offer any posible carpentry and carpentry administrations you may require. we finding the correct answer for each circumstance.</h2>
       </div>
     </div>
-    <div class="row clearfix">
+    <div class="row clearfix"  align="center">
 
       <!--Services Block Two-->
-      <div *ngFor="let partner of partners" class="services-block-three col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <div class="inner-box">
-          <div class="image" >
-            <img src="../../../assets/images/clients/{{partner.image}}" alt="">
+
+      <!--<div *ngFor="let partner of partners" class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="inner-box" style="padding: 0px;">
+          <div class="image" align="center">
+            <img src="../../../assets/images/S/MEDIAS/{{partner.image}}" alt="">
           </div>
           <h3>{{partner.name}}</h3>
         </div>
+      </div>-->
+      <div *ngFor="let partner of partners" class="services-block-two col-lg-3 col-md-4 col-sm-6 col-xs-12"  style="left: 15px;right: 0px">
+        <div class="inner-box" >
+          <div class="image" align="center" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" data-width="300" >
+            <img align="center"  src="../../../assets/images/S/MEDIAS/{{partner.image}}" alt="" height="100px">
+          </div>
+          <h3><br>{{partner.name}}<br></h3>
+        </div>
       </div>
+        <div class="services-block-two col-lg-3 col-md-4 col-sm-6 col-xs-12 col-lg-offset-3 col-lg-push-3" style="left: 15px;right: 0px">
+            <div class="inner-box" >
+                <div class="image" align="center" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" data-width="300" >
+                    <img align="center"  src="../../../assets/images/S/MEDIAS/Shams%20FM.png" alt="" height="100px">
+                </div>
+                <h3><br>Shams FM<br></h3>
+            </div>
+        </div>
+        <div class="services-block-two col-lg-3 col-md-4 col-sm-6 col-xs-12 " style="left: 15px;right: 0px">
+            <div class="inner-box" >
+                <div class="image" align="center" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" data-width="300" >
+                    <img align="center"  src="../../../assets/images/S/MEDIAS/Tunivision.png" alt="" height="100px">
+                </div>
+                <h3><br>Tunivision<br></h3>
+            </div>
+        </div>
+
+
     </div>
 
 
