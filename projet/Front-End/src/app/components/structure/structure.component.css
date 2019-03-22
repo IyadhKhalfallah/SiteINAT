@@ -1,13 +1,31 @@
 .team-block-two .inner-box .lower-box h4 {
     position: relative;
     color: #ffffff;
-    font-size: 20px;
+    //font-size: 20px;
+    font-size: 1.5vw;
     font-weight: 600;
     line-height: 1.2em;
-    padding: 15px 0px;
+    padding: 0.938em 0em;
     background-color: #f3ce44;
     font-family: 'Poppins', "Lato", sans-serif;}
+a{
+    font-size: 1.5vw;
+    line-height: 1.2em;
+
+}
 .team-block-two{
-    left: 15px;
-    padding: auto;
+    left: 0.938em;
+    padding: 0 auto;
+    display: inline-block;
+}
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+.wrapper{
+    margin: 0 auto;
 }
