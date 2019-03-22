@@ -2,7 +2,7 @@
 
 <!-- Project section -->
 <section class="project-section style-two" style="margin-top: 0rem;">
-  <div class="auto-container" style=" ">
+  <div class="auto-container">
     <!--Sec Title-->
     <div style="margin-bottom: -5rem" class="sec-title-two"><h2>Our Latest Projects</h2></div>
     <section  class="services-section-two" >
@@ -216,141 +216,17 @@
 </section>
 
 <!--  Sponsors Section -->
-<section
-  class="clients-section-two"
-  style="background-image:url(../../../assets/images/background/5.jpg)"
->
-  <div class="auto-container">
-    <div class="sponsors-outer">
-      <!--Sponsors Carousel-->
-      <ul class="sponsors-carousel owl-carousel owl-theme owl-loaded owl-drag">
-        <div class="owl-stage-outer">
-          <div
-            class="owl-stage"
-            style="transform: translate3d(-1170px, 0px, 0px); transition: all 0.5s ease 0s; width: 3744px;">
-            <div  class="owl-item cloned" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/S/Agil.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item cloned" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/S/_Président_(fromage).png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item cloned" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/8.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item cloned" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/5.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item cloned" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/6.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item active" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/5.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item active" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/6.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item active" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/7.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item active" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/8.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item active" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/5.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/6.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item cloned" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/5.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item cloned" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/6.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item cloned" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/7.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item cloned" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/clients/8.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-            <div class="owl-item cloned" style="width: 234px;">
-              <li class="slide-item">
-                <figure class="image-box">
-                  <a href="#"><img src="../../../assets/images/S/Agil.png" alt=""/></a>
-                </figure>
-              </li>
-            </div>
-          </div>
+
+<section class="service-container" style="background-color: white">
+  <div class="container">
+    <hr>
+    <div style="background-color: white" class="sblogos" data-random="true" data-interval="1500" data-keep-alive="4000">
+      <div class="sblogos__row">
+        <div *ngFor="let sponsor of sponsors" class="sblogos__col">
+          <a class="sblogos__link"><img class="sblogos__img" src="../../../assets/images/S/{{sponsor.image}}" alt="logo" /></a>
         </div>
-        <div class="owl-nav">
-          <div class="owl-prev"><span class="fa fa-angle-left"></span></div>
-          <div class="owl-next"><span class="fa fa-angle-right"></span></div>
-        </div>
-        <div class="owl-dots">
-          <div class="owl-dot active"><span></span></div>
-          <div class="owl-dot"><span></span></div>
-        </div>
-      </ul>
+
+      </div>
     </div>
   </div>
 </section>

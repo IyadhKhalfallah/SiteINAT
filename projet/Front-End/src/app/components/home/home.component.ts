@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-    sponsors = [
+  sponsors = [
         { name: 'Président' , image: '_Président_(fromage).png'},
         { name: 'Agil' , image: 'Agil.png'},
         { name: 'Alfa' , image: 'Alfa.png'},
@@ -127,7 +127,6 @@ export class HomeComponent implements OnInit {
               }
             });
         }
-        console.log(this.formations);
       }
     });
   }
