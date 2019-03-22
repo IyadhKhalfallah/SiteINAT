@@ -23,7 +23,6 @@
               "src/assets"
             ],
             "styles": [
-              
               "src/assets/css/bootstrap.css",
               "src/assets/plugins/revolution/css/settings.css",
               "src/assets/plugins/revolution/css/layers.css",
