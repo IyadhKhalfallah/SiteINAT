@@ -53,12 +53,19 @@ quote: '"  Chaque bonne réalisation, grande ou petite, connait ses périodes de
             tel: '+216 56 302 634',
             email: 'benlakhdar.manel.gm@gmail.com' },
 
-        {   name : 'Yasmin Mbarki' ,
+        /*{   name : 'Yasmin Mbarki' ,
             post : 'Responsable RH et Formations' ,
             image: 'rh%20et%20formation.JPG',
             quote: '" Si vous pouvez le rêver, vous pouvez le faire. "' ,
             tel: '+216 58 464 742',
-            email: 'yasmin.mbarki96@gmail.com' },
+            email: 'yasmin.mbarki96@gmail.com' },*/
+
+        {   name : 'Phyras Eltaief' ,
+            post : 'Responsable Communication' ,
+            image: 'communication.jpg',
+            quote: '" Aller vers l’infini, ce n’est pas seulement avancer très loin, c’est avancer éternellement. "' ,
+            tel: '+216 225 641 622',
+            email: 'firaseltaief1925@gmail.com'},
 
         {   name : 'Meriam Bettaieb' ,
             post : 'Responsable Projets et prospection' ,
