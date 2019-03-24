@@ -22,6 +22,7 @@ import { DetailsFormationComponent } from './components/formations/details-forma
 import {NgxPaginationModule} from 'ngx-pagination';
 import { SliderComponent } from './components/slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ActualitesComponent } from './components/actualites/actualites.component';
 
 const routes: Routes = [
   {path: '' , component: HomeComponent},
@@ -59,7 +60,8 @@ const routes: Routes = [
     DetailsEventComponent,
     DetailsProjectComponent,
     DetailsFormationComponent,
-    SliderComponent
+    SliderComponent,
+    ActualitesComponent
   ],
   imports: [
     NgxPaginationModule,

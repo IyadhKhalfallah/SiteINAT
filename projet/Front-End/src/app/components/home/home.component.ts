@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
       name: '6 ème édition du forum de l\'emploi et des stages',
       description:
         // tslint:disable-next-line:max-line-length
-        'L’agriculture tunisienne revêt une importance cruciale de par sa contribution à la sécurité alimentaire et à la garantie d’une activité et d’une source de revenu à la population rurale. Dans ce contexte, plusieurs filières phares ont connu un essor appréciable et ont enregistré des performances inédites notamment l’huile d’olive et les dattes.'
+        'L’agriculture tunisienne revêt une importance cruciale de par sa contribution à la sécurité alimentaire et à la garantie d’une activité et d’une source de revenu à la population rurale Dans ce contexte, plusieurs filières phares ont connu un essor appréciable et ont enregistré des performances inédites notamment l’huile d’olive et les dattes'
     }
   ];
 
@@ -31,57 +31,56 @@ export class HomeComponent implements OnInit {
     { nb: 121, title: 'title4' }
   ];
 
-
   values = [
     {
       title: 'La prospection',
       description:
-        'La prospection, la réalisation et la commercialisation des projets.'
+        'La prospection, la réalisation et la commercialisation des projets'
     },
     {
       title: 'Les formations',
-      description: 'Les formations approfondies en Soft et Hard-skills.'
+      description: 'Les formations approfondies en Soft et Hard-skills'
     },
     // tslint:disable-next-line:max-line-length
     {
       title: 'Les événements',
       description:
-        'Les événements stratégiques pour la promotion et de l\'image de marque et des projets entrepris .'
+        'Les événements stratégiques pour la promotion et de l\'image de marque et des projets entrepris'
     }
   ];
 
   sponsors = [
-        { name: 'Président' , image: '_Président_(fromage).png'},
-        { name: 'Agil' , image: 'Agil.png'},
-        { name: 'Alfa' , image: 'Alfa.png'},
-        { name: 'APIA' , image: 'APIA.png'},
-        { name: 'B lounge' , image: 'B lounge.jpg'},
-        {name: 'Bayer' , image: 'Bayer.png'},
-        { name: 'Ben Yedder' , image: 'Ben Yedder.png'},
-        { name: 'BFI' , image: 'BFI.png'},
-        { name: 'BIAT' , image: 'BIAT.png'},
-        { name: 'BNA' , image: 'BNA.png'},
-        { name: 'Cogite' , image: 'Cogite.png'},
-        { name: 'Comete Engineering' , image: 'Comete Engineering.png'},
-        { name: 'ILMS' , image: 'ILMS.png'},
-        { name: 'IMS' , image: 'IMS.png'},
-        { name: 'SCET' , image: 'logo-SCET.svg'},
-        { name: 'Mabrouka' , image: 'Mabrouka.png'},
-        { name: 'OHN' , image: 'ONH.png'},
-        { name: 'Orange Tunisie' , image: 'Orange-Tunisie_logo.png'},
-        { name: 'OVITA' , image: 'OVITA.png'},
-        { name: 'RED bull' , image: 'RED bull.png'},
-        { name: 'Ruspina' , image: 'Ruspina.png'},
-        { name: 'Sadira' , image: 'Sadira.png'},
-        { name: 'SFBT' , image: 'SFBT.png'},
-        { name: 'SNA' , image: 'SNA.png'},
-        { name: 'STB' , image: 'STB.png'},
-        { name: 'Toast' , image: 'Toast.jpg'},
-        { name: 'Toyota' , image: 'Toyota.png'},
-        { name: 'Tunisie Telecom' , image: 'tunisie-teleco.png'},
-        { name: 'UTAP' , image: 'UTAP.png'},
-        { name: 'Vitalait' , image: 'vitalait.png'}
-    ];
+    { name: 'Président', image: '_Président_(fromage).png' },
+    { name: 'Agil', image: 'Agil.png' },
+    { name: 'Alfa', image: 'Alfa.png' },
+    { name: 'APIA', image: 'APIA.png' },
+    { name: 'B lounge', image: 'B lounge.jpg' },
+    { name: 'Bayer', image: 'Bayer.png' },
+    { name: 'Ben Yedder', image: 'Ben Yedder.png' },
+    { name: 'BFI', image: 'BFI.png' },
+    { name: 'BIAT', image: 'BIAT.png' },
+    { name: 'BNA', image: 'BNA.png' },
+    { name: 'Cogite', image: 'Cogite.png' },
+    { name: 'Comete Engineering', image: 'Comete Engineering.png' },
+    { name: 'ILMS', image: 'ILMS.png' },
+    { name: 'IMS', image: 'IMS.png' },
+    { name: 'SCET', image: 'logo-SCET.svg' },
+    { name: 'Mabrouka', image: 'Mabrouka.png' },
+    { name: 'OHN', image: 'ONH.png' },
+    { name: 'Orange Tunisie', image: 'Orange-Tunisie_logo.png' },
+    { name: 'OVITA', image: 'OVITA.png' },
+    { name: 'RED bull', image: 'RED bull.png' },
+    { name: 'Ruspina', image: 'Ruspina.png' },
+    { name: 'Sadira', image: 'Sadira.png' },
+    { name: 'SFBT', image: 'SFBT.png' },
+    { name: 'SNA', image: 'SNA.png' },
+    { name: 'STB', image: 'STB.png' },
+    { name: 'Toast', image: 'Toast.jpg' },
+    { name: 'Toyota', image: 'Toyota.png' },
+    { name: 'Tunisie Telecom', image: 'tunisie-teleco.png' },
+    { name: 'UTAP', image: 'UTAP.png' },
+    { name: 'Vitalait', image: 'vitalait.png' }
+  ];
 
   constructor(
     private projectService: ProjectsService,
@@ -96,6 +95,7 @@ export class HomeComponent implements OnInit {
           this.photoService
             .getProjetsPhotos(data[i].projectid)
             .subscribe(photos => {
+
               const project = {
                 id: data[i].projectid,
                 name: data[i].name,

@@ -50,7 +50,7 @@ a,
 .news-block-three .inner-box .lower-content .lower-box h3 a:hover,
 .news-block-three .inner-box .lower-content .upper-box .posted-date,
 .gallery-section .filters .filter.active, .gallery-section .filters .filter:hover{
-	color:#Daa520;
+	color:#DAA520;
 }
 
 /*Background Color*/
@@ -63,7 +63,6 @@ a,
 .btn-style-five:hover,
 .sec-title-two h2:before,
 .btn-style-six:hover,
-.main-header .header-top,
 .accordion-box .block.active-block,
 .services-section .services-title h2:after,
 .main-menu .navigation > li > ul,
@@ -93,8 +92,9 @@ a,
 .styled-pagination li a:hover, .styled-pagination li a.active,
 .shop-single .product-details .prod-tabs .tab-btns .tab-btn:before,
 .shop-single .product-details .prod-tabs .tab-btns .tab-btn{
-	background-color:#Daa520;
+	background-color:#DAA520;
 }
+
 
 
 /*Border Color*/
@@ -138,7 +138,7 @@ a,
 .shop-comment-form .form-group textarea:focus,
 .shop-form input:focus, .shop-form select:focus, .shop-form textarea:focus,
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{
-	border-color:#Daa520;
+	border-color:#DAA520;
 }
 
 /*RGBA Color Light*/
@@ -154,7 +154,7 @@ a,
 @media only screen and (max-width: 767px){
 	
 	.main-menu .navbar-header .navbar-toggle{
-		border-color:#Daa520;
+		border-color:#DAA520;
 	}
 	
 	.main-menu .navbar-header .navbar-toggle,
@@ -173,7 +173,7 @@ a,
 	.main-menu .navbar-collapse > .navigation > li.current > a,
 	.main-menu .navbar-collapse > .navigation > li.current-menu-item > a,
 	.header-style-two.inner-header .main-menu .navigation > li > a{
-		background-color:#Daa520;
+		background-color:#DAA520;
 	}
 	
 }

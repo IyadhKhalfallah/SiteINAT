@@ -35,10 +35,7 @@
 **********************************************/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,700');
-/*font-family: 'Poppins', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Lato', sans-serif;*/
+
 
 @import url('font-awesome.css');
 @import url('flaticon.css');
@@ -47,6 +44,16 @@ font-family: 'Lato', sans-serif;*/
 @import url('jquery.fancybox.css');
 @import url('jquery.bootstrap-touchspin.css');
 @import url('jquery.mCustomScrollbar.min.css');
+
+@font-face {
+	font-family: "Typo-Grotesk-Bold";
+	src: url("../fonts/Typo-Grotesk-Bold.otf");
+}
+
+@font-face {
+	font-family: "Typo-Grotesk-Regulier";
+	src: url("../fonts/Typo-Grotesk-Regulier.otf");
+}
 
 /*** 
 
@@ -74,7 +81,7 @@ font-family: 'Lato', sans-serif;*/
 body {
 	font-size:15px;
 	color:black;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 	line-height:1.8em;
 	font-weight:400;
 	background:#ffffff;
@@ -104,7 +111,7 @@ h1,h2,h3,h4,h5,h6 {
 
 input,button,select,textarea{
 	
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 textarea{
@@ -205,7 +212,7 @@ ul,li{
 	color:#797979;
 	font-size:17px;
 	font-weight:400;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .list-style-two li:before{
@@ -229,7 +236,7 @@ ul,li{
 	background:#Daa520;
 	display:inline-block;
 	padding:19px 35px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .btn-style-one:hover{
@@ -251,7 +258,7 @@ ul,li{
 	border-radius:50px;
 	border:2px solid #ffffff;
 	text-transform: capitalize;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .btn-style-two:hover{
@@ -273,7 +280,7 @@ ul,li{
 	border-radius:50px;
 	border:2px solid #Daa520;
 	text-transform: capitalize;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .btn-style-three:hover{
@@ -294,7 +301,7 @@ ul,li{
 	padding:11px 36px 11px;
 	border-radius:50px;
 	border:2px solid #Daa520;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .btn-style-four:hover{
@@ -314,7 +321,7 @@ ul,li{
 	display:inline-block;
 	padding:11px 36px 11px;
 	border-radius:50px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .btn-style-five:hover{
@@ -335,7 +342,7 @@ ul,li{
 	padding:12px 55px 12px;
 	border-radius:50px;
 	border:2px solid #Daa520;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .btn-style-six:hover{
@@ -357,7 +364,7 @@ ul,li{
 	border-radius:50px;
 	border:2px solid #d15454;
 	text-transform:uppercase;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .btn-style-seven:hover{
@@ -577,7 +584,7 @@ img{
 
 .main-header .header-top{
 	position:relative;
-	background:#Daa520;
+	background:rgb(0, 0, 0);
 	color:#ffffff;
 }
 
@@ -1004,7 +1011,7 @@ img{
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .main-menu .navigation > li > ul > li:hover > a{
@@ -1074,7 +1081,7 @@ img{
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .main-menu .navigation > li > ul > li  > ul > li > a:hover{
@@ -1435,7 +1442,7 @@ img{
 	font-weight:600;
 	line-height:1.2em;
 	padding-bottom:20px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .main-slider .text{
@@ -1444,7 +1451,7 @@ img{
 	font-weight:400;
 	color:#ffffff;
 	line-height:1.7em;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .main-slider h2{
@@ -1511,7 +1518,7 @@ img{
 	line-height:1.4em;
 	padding-bottom:18px;
 	display:inline-block;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .sec-title h2:after{
@@ -1551,7 +1558,7 @@ img{
 	font-weight:600;
 	line-height:1.2em;
 	display:inline-block;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .sec-title-two h2:before{
@@ -1669,7 +1676,7 @@ img{
 	font-size:17px;
 	margin-bottom:20px;
 	text-align:center;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .services-block .inner-box h3 a{
@@ -1716,7 +1723,7 @@ img{
 	font-size:22px;
 	font-weight:300;
 	margin-bottom:10px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .about-section .about-column .inner-column .text{
@@ -1725,7 +1732,7 @@ img{
 	font-size:17px;
 	font-weight:300;
 	margin-bottom:40px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .about-section .about-column .inner-column .author-sign{
@@ -1863,7 +1870,7 @@ img{
 	line-height:1.7em;
 	font-size:17px;	
 	color:#ffffff;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .accordion-box .block .content p:last-child{
@@ -1949,7 +1956,7 @@ img{
 	color:#242424;
 	font-size:17px;
 	font-weight:400;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .accordion-box.alternate .block .content .text{
@@ -2395,7 +2402,7 @@ img{
 	font-size:17px;
 	line-height:1.6em;
 	margin-bottom:20px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .quote-section .form-column{
@@ -2419,7 +2426,7 @@ img{
 	font-weight:600;
 	line-height:1.2em;
 	margin-bottom:12px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .quote-section .form-column .inner-column .text{
@@ -2536,7 +2543,7 @@ img{
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 	transform-origin: left bottom;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .testimonial-section .inner-container{
@@ -2592,7 +2599,7 @@ img{
 	font-weight:600;
 	line-height:1.2em;
 	margin-bottom:2px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .testimonial-block .inner-box .author-box .inner .designation{
@@ -2600,7 +2607,7 @@ img{
 	font-size:17px;
 	font-style:italic;
 	color:#ffffff;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .testimonial-section .owl-dots{
@@ -2698,7 +2705,7 @@ img{
 	padding:7px 20px;
 	margin-bottom:18px;
 	background-color:#Daa520;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .news-block .inner-box .lower-box h3{
@@ -2707,7 +2714,7 @@ img{
 	font-weight:600;
 	line-height:1.4em;
 	margin-bottom:12px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .news-block .inner-box .lower-box h3 a{
@@ -2730,7 +2737,7 @@ img{
 	font-size:16px;
 	line-height:1.7em;
 	margin-bottom:18px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .news-block .inner-box .lower-box .read-more{
@@ -2885,7 +2892,7 @@ img{
 	line-height:1.2em;
 	margin-bottom:15px;
 	display:inline-block;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .call-to-action-section .title:after{
@@ -2904,7 +2911,7 @@ img{
 	font-size:35px;
 	line-height:1.4em;
 	font-weight:600;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .call-to-action-section .btn-column{
@@ -2953,7 +2960,7 @@ img{
 	color:#ffffff;
 	margin-bottom:20px;
 	text-transform:capitalize;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .main-footer .logo-widget{
@@ -3130,7 +3137,7 @@ img{
 	line-height:1.5em;
 	max-width:960px;
 	margin-bottom:15px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .services-section-two .services-title .text{
@@ -3139,7 +3146,7 @@ img{
 	font-size:17px;
 	line-height:1.8em;
 	max-width:840px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .services-section-two .services-title .services-link{
@@ -3210,7 +3217,7 @@ img{
 	-webkit-transition:all 0.3s ease;
 	-ms-transition:all 0.3s ease;
 	-o-transition:all 0.3s ease;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .services-block-two .inner-box:hover{
@@ -3296,7 +3303,7 @@ img{
 	line-height:1.2em;
 	display:inline-block;
 	margin-bottom:20px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .fluid-section-one .content-column .inner-box h2:after{
@@ -3316,7 +3323,7 @@ img{
 	line-height:1.7em;
 	margin-bottom:35px;
 	color:rgba(255,255,255,0.65);
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 /*** 
@@ -3388,7 +3395,7 @@ img{
 	font-weight:800;
 	color:#ffffff;
 	font-size:70px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .fact-counter .count-outer .count-text{
@@ -3396,7 +3403,7 @@ img{
 	font-weight:800;
 	color:#ffffff;
 	font-size:70px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .fact-counter .column .counter-title{
@@ -3496,7 +3503,7 @@ img{
 	font-weight:600;
 	line-height:1.2em;
 	margin-bottom:3px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .team-block .inner-box .lower-box h3 a{
@@ -3548,7 +3555,7 @@ img{
 	line-height:1.2em;
 	margin-bottom:25px;
 	display:inline-block;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .call-back-section .outer-container .left-column .content h2:after{
@@ -3605,7 +3612,7 @@ img{
 	-ms-transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	transition:all 500ms ease;	
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .request-form .form-group textarea::-webkit-input-placeholder,
@@ -3631,7 +3638,7 @@ img{
 	-ms-transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	transition:all 500ms ease;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .request-form .form-group input:focus,
@@ -3769,7 +3776,7 @@ img{
 	font-weight:600;
 	line-height:1.2em;
 	margin-bottom:12px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .we-do-section .content-column .inner-column .color-text{
@@ -3777,7 +3784,7 @@ img{
 	color:#d15454;
 	font-size:20px;
 	margin-bottom:10px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .we-do-section .content-column .inner-column .text{
@@ -3791,7 +3798,7 @@ img{
 	font-size:17px;
 	line-height:1.7em;
 	margin-bottom:25px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .services-block-three{
@@ -3836,7 +3843,7 @@ img{
 	font-size:17px;
 	font-weight:600;
 	text-align:center;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .services-block-three .inner-box h3 a{
@@ -3916,7 +3923,7 @@ img{
 	font-size:22px;
 	line-height:1.6em;
 	margin-bottom:30px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .ceo-section .content-column .inner-column .text{
@@ -3987,7 +3994,7 @@ img{
 	color:#ffffff;
 	font-size:13px;
 	font-weight:500;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .page-title .page-breadcrumb li:after{
@@ -4051,7 +4058,7 @@ img{
 	line-height:1.4em;
 	padding-bottom:18px;
 	margin-bottom:35px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .workshop-section .content-column .inner-column h2:after{
@@ -4070,7 +4077,7 @@ img{
 	font-size:17px;
 	line-height:1.7em;
 	margin-bottom:40px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .workshop-section .image-column{
@@ -4147,7 +4154,7 @@ img{
 	line-height:1.2em;
 	margin-bottom:10px;
 	text-transform:capitalize;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .services-block-four .inner-box .content h3 a{
@@ -4167,7 +4174,7 @@ img{
 	position:relative;
 	color:#797979;
 	font-size:16px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 /*Error Section*/
@@ -4202,7 +4209,7 @@ img{
 	font-weight:800;
 	line-height:1em;
 	margin-bottom:10px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .error-section h2{
@@ -4212,7 +4219,7 @@ img{
 	font-weight:600;
 	line-height:1.2em;
 	margin-bottom:20px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .error-section .text{
@@ -4222,14 +4229,14 @@ img{
 	font-weight:500;
 	margin-top:10px;
 	margin-bottom:60px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .error-section .theme-btn{
 	font-size:23px;
 	font-weight:600;
 	padding:19px 45px 19px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 /*** 
@@ -4304,7 +4311,7 @@ img{
 	font-weight:600;
 	margin-bottom:10px;
 	line-height:1.2em;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .news-block-three .inner-box .lower-content .upper-box .post-meta{
@@ -4320,7 +4327,7 @@ img{
 	font-weight:700;
 	margin-bottom:6px;
 	display:inline-block;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .news-block-three .inner-box .lower-content .upper-box .post-meta li:after{
@@ -4353,13 +4360,13 @@ img{
 	line-height:1.2em;
 	margin-bottom:18px;
 	color:#242424;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .news-block-three .inner-box .lower-content .lower-box h3 a{
 	position:relative;
 	color:#242424;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 	transition:all 0.3s ease;
 	-moz-transition:all 0.3s ease;
 	-webkit-transition:all 0.3s ease;
@@ -4377,7 +4384,7 @@ img{
 	font-size:17px;
 	line-height:1.7em;
 	margin-bottom:35px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .news-block-three .inner-box .lower-content .lower-box .text p{
@@ -4386,7 +4393,7 @@ img{
 	font-size:17px;
 	line-height:1.7em;
 	margin-bottom:35px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .news-block-three .inner-box .lower-content .lower-box .read-more{
@@ -4443,7 +4450,7 @@ img{
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .styled-pagination li a:hover,
@@ -4490,7 +4497,7 @@ img{
     line-height: 1.2em;
 	display:inline-block;
     text-transform: capitalize;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .sidebar-title h2:after{
@@ -4567,7 +4574,7 @@ img{
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .cat-list li a:after{
@@ -4643,7 +4650,7 @@ img{
 	color:#242424;
 	line-height:1.4em;
 	text-transform:capitalize;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .sidebar .popular-posts .post .text a{
@@ -4664,7 +4671,7 @@ img{
 	font-size:14px;
 	color:#9a9a9a;
 	font-weight:700;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 /*Popular Tags*/
@@ -4687,7 +4694,7 @@ img{
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .sidebar .popular-tags a:hover{
@@ -4728,7 +4735,7 @@ img{
 	color:#242424;
 	font-weight:600;
 	padding-bottom:0px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .sidebar-page-container .comments-area .inner-box{
@@ -4984,7 +4991,7 @@ img{
 	font-weight:700;
 	line-height:1.2em;
 	margin-bottom:60px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .comming-soon .content .content-inner .text{
@@ -4995,7 +5002,7 @@ img{
 	line-height:1.6em;
 	margin-top:30px;
 	margin-bottom:30px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 /*** 
@@ -5091,7 +5098,7 @@ img{
 	text-align:center;
 	background:#Daa520;
 	border-radius:5px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .faq-section{
@@ -5224,7 +5231,7 @@ img{
 	-o-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
 	transition:all 300ms ease;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .faq-form-section .form-group input::-webkit-input-placeholder,
@@ -5251,7 +5258,7 @@ img{
 	resize:none;
 	font-size:16px;
 	font-weight:700;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 	border-bottom:2px solid #e3e3e3;
 	-webkit-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
@@ -5306,7 +5313,7 @@ img{
     -webkit-transition: all 300ms ease;
     -ms-transition: all 300ms ease;
     -o-transition: all 300ms ease;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .gallery-section .filters .filter.active,
@@ -5417,7 +5424,7 @@ img{
 	font-weight:600;
 	line-height:1.2em;
 	margin-bottom:10px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .services-block-five .inner-box .lower-box h3 a{
@@ -5459,7 +5466,7 @@ img{
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .blog-cat li.active a,
@@ -5597,7 +5604,7 @@ img{
 	font-weight:600;
 	line-height:1.2em;
 	margin-bottom:15px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .services-single .inner-box .lower-content .text{
@@ -5609,7 +5616,7 @@ img{
 	color:#797979;
 	font-size:17px;
 	margin-bottom:25px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .services-single .inner-box .lower-content h4{
@@ -5618,7 +5625,7 @@ img{
 	font-size:26px;
 	font-weight:600;
 	margin-bottom:15px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .services-single .inner-box .lower-content .two-column .image-column .image{
@@ -5641,7 +5648,7 @@ img{
 	font-size:17px;
 	line-height:1.7em;
 	margin-bottom:25px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .requirement-box{
@@ -5674,7 +5681,7 @@ img{
 	font-weight:600;
 	line-height:1.6em;
 	margin-bottom:25px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .requirement-box .inner-box .theme-btn{
@@ -5718,7 +5725,7 @@ img{
 	font-size:18px;
 	line-height:1.6em;
 	margin-bottom:40px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .shop-banner .image-column{
@@ -5773,7 +5780,7 @@ img{
 	font-weight:600;
 	line-height:1.2em;
 	margin-bottom:10px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .feature-block .inner-box h3 a{
@@ -5832,7 +5839,7 @@ img{
 	font-weight:700;
 	line-height:1.2em;
 	margin-bottom:12px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .shop-item .inner-box .lower-content h3 a{
@@ -5854,7 +5861,7 @@ img{
 	font-size:25px;
 	font-weight:700;
 	margin-bottom:20px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .shop-item .inner-box .lower-content .theme-btn{
@@ -5925,7 +5932,7 @@ img{
     font-weight: 700;
     line-height: 1.2em;
     margin-bottom: 8px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .shop-item-two .inner-box .lower-content h3 a{
@@ -5943,7 +5950,7 @@ img{
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .shop-item-two .inner-box .lower-content .theme-btn{
@@ -5981,7 +5988,7 @@ img{
 	font-size:18px;
 	line-height:1.6em;
 	margin-bottom:35px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .products-section .content-column .inner-column .theme-btn{
@@ -6034,7 +6041,7 @@ img{
 	line-height:1.2em;
 	color:#242424;
 	padding-bottom:20px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .product-details .basic-details .text{
@@ -6054,7 +6061,7 @@ img{
 	font-size:18px;
 	font-weight:500;
 	margin-bottom:30px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .product-details .basic-details .price span{
@@ -6062,7 +6069,7 @@ img{
 	font-size:22px;
 	color:#242424;
 	margin-left:10px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .product-details .basic-details .quantity-spinner,
@@ -6207,7 +6214,7 @@ img{
 	line-height:1.7em;
 	margin-bottom:25px;
 	color:#797979;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .prod-tabs .tabs-content .tab .title{
@@ -6638,7 +6645,7 @@ img{
 
 .cart-table tbody tr td.price{
 	font-weight:600;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .cart-table tbody tr td:last-child{
@@ -6650,7 +6657,7 @@ img{
 	position:relative;
 	font-size:17px;
 	color:#797979;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .cart-table tbody tr td .quantity-spinner{
@@ -6722,7 +6729,7 @@ img{
 	font-size:15px;
 	color:#ffffff;
 	background-color:#242424;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .cart-section .cart-options .btn-style-one{
@@ -6778,7 +6785,7 @@ img{
 .cart-section .totals-table .total .price{
 	color:#444444;
 	font-weight:700;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .cart-section .totals-table .proceed-btn{
@@ -7088,7 +7095,7 @@ img{
 	line-height:1.2em;
 	padding:15px 0px;
 	background-color:#Daa520;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .team-block-two .inner-box .lower-box h3 a{
@@ -7136,7 +7143,7 @@ img{
 	font-size:17px;
 	line-height:1.7em;
 	margin-bottom:24px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 .testimonial-block-two .inner-box .author-box{
@@ -7167,7 +7174,7 @@ img{
 	color:#222328;
 	line-height:1.2em;
 	padding-top: 5px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Typo-Grotesk-Bold', sans-serif;
 }
 
 .testimonial-block-two .inner-box .author-box .inner .designation{
@@ -7175,7 +7182,7 @@ img{
 	color:#Daa520;
 	font-size:18px;
 	font-style:italic;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Typo-Grotesk-Regulier', sans-serif;
 }
 
 /*** 

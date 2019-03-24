@@ -13,8 +13,8 @@
   <div class="auto-container">
       <!--Sec Title-->
         <div class="sec-title">
-            <div class="title">What we do</div>
-            <h2>We are woodex offer any posible carpentry and carpentry administrations you may require. we  finding the correct answer for each circumstance, and are not prevented by a little test.</h2>
+            <div class="title">Projets</div>
+            <h2 style="font-family: 'Typo-Grotesk-Regulier'">We are woodex offer any posible carpentry and carpentry administrations you may require we  finding the correct answer for each circumstance, and are not prevented by a little test</h2>
         </div>
         <div class="row clearfix">
           
@@ -34,4 +34,29 @@
             </div>
         </div>
     </div>
+
+    <div class="auto-container">
+        <!--Sec Title-->
+          <div class="sec-title">
+              <div class="title">Projets d'étude</div>
+              <h2 style="font-family: 'Typo-Grotesk-Regulier'">We are woodex offer any posible carpentry and carpentry administrations you may require we  finding the correct answer for each circumstance, and are not prevented by a little test</h2>
+          </div>
+          <div class="row clearfix">
+            
+              <!--Services Block Five-->
+              <div *ngFor="let project of projects" class="services-block-five col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="image">
+                        <img src="../../../assets/images/projets/affiche{{project.image}}" alt="">
+                          <div class="overlay">
+                            <a routerLink="/projects/{{project.id}}" class="theme-btn btn-style-two">Lire la suite</a>
+                          </div>
+                      </div>
+                      <div class="lower-box">
+                        <h3><a routerLink="/projects/{{project.id}}">{{project.title}}</a></h3>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 </section>

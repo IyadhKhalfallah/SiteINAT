@@ -1,3 +1,7 @@
 .image {
     height: auto
 }
+
+.image img {
+    height: 300px
+}
