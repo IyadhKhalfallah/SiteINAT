@@ -244,26 +244,14 @@
 
 <!--  Sponsors Section -->
 
-<section class="service-container" style="background-color: white">
-  <div class="container">
-    <hr />
-    <div
-      style="background-color: white"
-      class="sblogos"
-      data-random="true"
-      data-interval="1500"
-      data-keep-alive="4000"
-    >
-      <div class="sblogos__row">
-        <div *ngFor="let sponsor of sponsors" class="sblogos__col">
-          <a class="sblogos__link"
-            ><img
-              class="sblogos__img"
-              src="../../../assets/images/S/{{ sponsor.image }}"
-              alt="logo"
-          /></a>
-        </div>
+
+<section style="margin-bottom: 50px">
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide" *ngFor="let sponsor of sponsors" style="margin-right: 15px">
+        <img src="../../../assets/images/S/{{ sponsor.image }}" height="100" width="250" alt="" />
       </div>
     </div>
   </div>
 </section>
+

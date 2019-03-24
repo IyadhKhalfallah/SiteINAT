@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from 'src/app/services/projects.service';
 import { PhotosService } from 'src/app/services/photos.service';
 import { FormationsService } from 'src/app/services/formations.service';
+declare var jQuery: any;
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   projects = [];
@@ -86,7 +87,8 @@ export class HomeComponent implements OnInit {
     private projectService: ProjectsService,
     private photoService: PhotosService,
     private formationService: FormationsService
-  ) {}
+  ) {
+  }
 
   ngOnInit() {
     this.projectService.getProjets().subscribe(data => {
