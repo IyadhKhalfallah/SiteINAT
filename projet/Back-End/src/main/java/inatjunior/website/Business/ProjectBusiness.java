@@ -16,8 +16,8 @@ public class ProjectBusiness {
     @Autowired
     ProjectPhotoRepository projectPhotoRepository;
 
-    public Project createProject(String name, String description, Date opening, Date closing, Enterprise client){
-        Project p = new Project(name,description,opening,closing,client);
+    public Project createProject(String name, String description, Date opening, Date closing, boolean academic, Enterprise client){
+        Project p = new Project(name,description,opening,closing, academic, client);
         projectRepository.save(p);
         return p;
     }
@@ -31,11 +31,12 @@ public class ProjectBusiness {
             projectRepository.delete(pr);
     }
 
-    public Project updateProject(Project p, String name, String description, Date opening, Date closing, Enterprise client){
+    public Project updateProject(Project p, String name, String description, Date opening, Date closing, boolean academic, Enterprise client){
             p.setName(name);
             p.setDescription(description);
             p.setOpening(opening);
             p.setClosing(closing);
+            p.setAcademic(academic);
             p.setClient(client);
             projectRepository.save(p);
         return p;

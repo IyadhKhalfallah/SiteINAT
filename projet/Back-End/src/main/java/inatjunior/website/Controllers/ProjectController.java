@@ -19,7 +19,7 @@ public class ProjectController {
 
     @PostMapping("/project")
     public Project createProject(@RequestParam long clientid, @RequestBody Project e){
-        return projectBusiness.createProject(e.getName(),e.getDescription(),e.getOpening(),e.getClosing(),enterpriseBusiness.getEnterprise(clientid));
+        return projectBusiness.createProject(e.getName(),e.getDescription(),e.getOpening(),e.getClosing(),e.isAcademic(),enterpriseBusiness.getEnterprise(clientid));
     }
 
     @GetMapping(value = "/project/{id}")
@@ -36,7 +36,7 @@ public class ProjectController {
     @PutMapping(value = "/project/{id}")
     public Project updateProject(@PathVariable("id") long id, @RequestBody Project n, @RequestParam long clientid){
         Project e = projectBusiness.getProject(id);
-        return projectBusiness.updateProject(e,n.getName(),n.getDescription(),n.getOpening(),n.getClosing(),enterpriseBusiness.getEnterprise(clientid));
+        return projectBusiness.updateProject(e,n.getName(),n.getDescription(),n.getOpening(),n.getClosing(),e.isAcademic(),enterpriseBusiness.getEnterprise(clientid));
     }
 
     @GetMapping("/projects")

@@ -34,11 +34,15 @@ public class Project {
     @Setter
     private Date closing;
 
-    public Project(String name, String description, Date opening, Date closing, Enterprise client) {
+    @Setter
+    private boolean academic;
+
+    public Project(String name, String description, Date opening, Date closing, boolean academic, Enterprise client) {
         this.name = name;
         this.description = description;
         this.opening = opening;
         this.closing = closing;
+        this.academic = academic;
         this.client=client;
     }
 
