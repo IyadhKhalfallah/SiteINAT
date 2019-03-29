@@ -43,6 +43,12 @@ public class MemberBusiness {
                 if (t.getId().getMemberId() == member.getMemberid())
                     organizerRepository.delete(t);
             }
+            List<MemberPhoto> photos = member.getMemberphotos();
+            Iterator<MemberPhoto> iter = photos.iterator();
+            while (iter.hasNext()) {
+            MemberPhoto t = iter.next();
+            memberPhotoRepository.delete(t);
+            }
             Member m = memberRepository.getOne(member.getMemberid());
             memberRepository.delete(m);
     }

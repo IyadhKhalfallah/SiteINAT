@@ -33,6 +33,12 @@ public class EventBusiness {
                 if (t.getId().getEventid() == ev1.getEventid())
                     organizerRepository.delete(t);
             }
+            List<EventPhoto> photos = ev1.getEventphotos();
+            Iterator<EventPhoto> iterp = photos.iterator();
+            while (iterp.hasNext()) {
+            EventPhoto t = iterp.next();
+            eventPhotoRepository.delete(t);
+            }
             Event ev2 = eventRepository.getOne(ev1.getEventid());
             eventRepository.delete(ev2);
     }

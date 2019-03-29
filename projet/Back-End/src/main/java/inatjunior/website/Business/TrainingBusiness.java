@@ -16,7 +16,13 @@ public class TrainingBusiness {
     TrainerRepository trainerRepository;
 
     @Autowired
+    OrganizerRepository organizerRepository;
+
+    @Autowired
     MemberRepository memberRepository;
+
+    @Autowired
+    EventPhotoRepository eventPhotoRepository;
 
     public Training createTraining(String name, String description, Date opening, Date closing, String place, String program, String goals, String prerequisites, String equipment){
         Training tr1 = new Training(name,description,opening,closing,place,program,goals,prerequisites,equipment);
@@ -31,6 +37,19 @@ public class TrainingBusiness {
                 Trainer t = iter.next();
                 if (t.getId().getEventid() == tr1.getEventid())
                     trainerRepository.delete(t);
+            }
+            List<Organizer> organizers = this.getOrganizers(tr1);
+            Iterator<Organizer> iter1 = organizers.iterator();
+            while (iter1.hasNext()) {
+                Organizer o = iter1.next();
+                if (o.getId().getEventid() == tr1.getEventid())
+                    organizerRepository.delete(o);
+            }
+            List<EventPhoto> photos = tr1.getEventphotos();
+            Iterator<EventPhoto> iterp = photos.iterator();
+            while (iterp.hasNext()) {
+            EventPhoto p = iterp.next();
+            eventPhotoRepository.delete(p);
             }
             Training tr2 = trainingRepository.getOne(tr1.getEventid());
             trainingRepository.delete(tr2);
@@ -58,6 +77,18 @@ public class TrainingBusiness {
                     the.add(t);
             }
             return the;
+    }
+
+    public List<Organizer> getOrganizers(Training ev){
+        List<Organizer> all = organizerRepository.findAll();
+        List<Organizer> the = new ArrayList<>();
+        Iterator<Organizer> it = all.iterator();
+        while (it.hasNext()){
+            Organizer t = it.next();
+            if (t.getEvent().getEventid() == ev.getEventid())
+                the.add(t);
+        }
+        return the;
     }
 
     public Training updateTraining(Training t,String name, String description, Date opening, Date closing, String place, String program, String goals, String prerequisites, String equipment){

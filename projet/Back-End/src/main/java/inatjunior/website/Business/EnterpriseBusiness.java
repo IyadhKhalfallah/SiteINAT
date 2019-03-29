@@ -37,6 +37,12 @@ public class EnterpriseBusiness {
                 Project t = iter.next();
                 projectRepository.delete(t);
             }
+            List<EnterprisePhoto> photos = enterprise.getEnterprisephotos();
+            Iterator<EnterprisePhoto> iterp = photos.iterator();
+            while (iterp.hasNext()) {
+            EnterprisePhoto p = iterp.next();
+            enterprisePhotoRepository.delete(p);
+            }
             Enterprise e = enterpriseRepository.getOne(enterprise.getEnterpriseid());
             enterpriseRepository.delete(e);
     }

@@ -27,6 +27,12 @@ public class ProjectBusiness {
     }
 
     public void deleteProject(Project p){
+            List<ProjectPhoto> photos = p.getProjectphotos();
+            Iterator<ProjectPhoto> iter = photos.iterator();
+            while (iter.hasNext()) {
+            ProjectPhoto t = iter.next();
+            projectPhotoRepository.delete(t);
+            }
             Project pr = projectRepository.getOne(p.getProjectid());
             projectRepository.delete(pr);
     }
