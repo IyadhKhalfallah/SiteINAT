@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from 'src/app/services/projects.service';
 import { PhotosService } from 'src/app/services/photos.service';
 import { FormationsService } from 'src/app/services/formations.service';
+import { NewService } from 'src/app/services/new.service';
 declare var jQuery: any;
 
 @Component({
@@ -12,6 +13,17 @@ declare var jQuery: any;
 export class HomeComponent implements OnInit {
   projects = [];
   formations = [];
+  news = [
+    {
+      id: 1,
+      img: 'affiche/forum-6Affiche.jpg',
+      date: '14-11-2018',
+      name: 'News 1',
+      description:
+        // tslint:disable-next-line:max-line-length
+        'Description News 1'
+    }
+  ];
   events = [
     // tslint:disable-next-line:max-line-length
     {
@@ -86,18 +98,18 @@ export class HomeComponent implements OnInit {
   constructor(
     private projectService: ProjectsService,
     private photoService: PhotosService,
-    private formationService: FormationsService
-  ) {
-  }
+    private formationService: FormationsService,
+    private newsService: NewService
+  ) {}
 
   ngOnInit() {
+    // Projects
     this.projectService.getProjets().subscribe(data => {
       if (data) {
         for (let i = 0; i < 3; i++) {
           this.photoService
             .getProjetsPhotos(data[i].projectid)
             .subscribe(photos => {
-
               const project = {
                 id: data[i].projectid,
                 name: data[i].name,
@@ -108,7 +120,7 @@ export class HomeComponent implements OnInit {
         }
       }
     });
-    // Formation
+    // Formations
     this.formationService.getFormations().subscribe(data => {
       if (data) {
         for (let i = 0; i < 4; i++) {
@@ -131,5 +143,24 @@ export class HomeComponent implements OnInit {
         }
       }
     });
+    // News
+    // this.newsService.getNews().subscribe(data => {
+    //   if (data) {
+    //     for (let i = 0; i < 4; i++) {
+    //       this.photoService
+    //         .getNewsPhotos(data[i].newsid)
+    //         .subscribe(photos => {
+    //             const news = {
+    //               id: data[i].newsid,
+    //               name: data[i].name,
+    //               description: data[i].description,
+    //               date: data[i].date,
+    //               img: data[i].path
+    //             };
+    //             this.news.push(news);
+    //         });
+    //     }
+    //   }
+    // });
   }
 }

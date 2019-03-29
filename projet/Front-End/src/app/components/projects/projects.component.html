@@ -1,59 +1,93 @@
-<section class="page-title" style="background-image:url(../../../assets/images/projets/Etudes.jpg)">
+<section
+  class="page-title"
+  style="background-image:url(../../../assets/images/projets/Etudes.jpg)"
+>
   <div class="auto-container">
-      <h1>PROJETS</h1>
-        <ul class="page-breadcrumb">
-          <li><a routerLink="/home">Accueil</a></li>
-            <li>Projets</li>
-        </ul>
-    </div>
+    <h1>PROJETS</h1>
+    <ul class="page-breadcrumb">
+      <li><a routerLink="/home">Accueil</a></li>
+      <li>Projets</li>
+    </ul>
+  </div>
 </section>
 
-
 <section class="services-page-section">
-  <div class="auto-container">
-      <!--Sec Title-->
-        <div class="sec-title">
-            <div class="title">Projets</div>
-            <h2 style="font-family: 'Typo-Grotesk-Regulier'; font-weight: 500">We are woodex offer any posible carpentry and carpentry administrations you may require we  finding the correct answer for each circumstance, and are not prevented by a little test</h2>
-        </div>
-        <div class="row clearfix">
-          
-            <!--Services Block Five-->
-            <div *ngFor="let project of projects" class="services-block-five col-md-4 col-sm-6 col-xs-12">
-              <div class="inner-box">
-                  <div class="image">
-                      <img src="../../../assets/images/projets/affiche{{project.image}}" alt="">
-                        <div class="overlay">
-                          <a routerLink="/projects/{{project.id}}" class="theme-btn btn-style-two">Lire la suite</a>
-                        </div>
-                    </div>
-                    <div class="lower-box">
-                      <h3><a routerLink="/projects/{{project.id}}">{{project.title}}</a></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div  *ngIf="academicProjects.length > 0" class="auto-container">
+    <!--Sec Title-->
+    <div class="sec-title">
+      <div class="title">Projets académique</div>
+      <h2 style="font-family: 'Typo-Grotesk-Regulier'; font-weight: 500">
+        Découvrez nos projets
+      </h2>
     </div>
+    <div class="row clearfix">
+      <!--Services Block Five-->
+      <div
+        *ngFor="let project of academicProjects"
+        class="services-block-five col-md-4 col-sm-6 col-xs-12"
+      >
+        <div class="inner-box">
+          <div class="image">
+            <img
+              src="../../../assets/images/projets/affiche{{ project.image }}"
+              alt=""
+            />
+            <div class="overlay">
+              <a
+                routerLink="/projects/{{ project.id }}"
+                class="theme-btn btn-style-two"
+                >Lire la suite</a
+              >
+            </div>
+          </div>
+          <div class="lower-box">
+            <h3>
+              <a routerLink="/projects/{{ project.id }}">{{ project.title }}</a>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- <div class="auto-container">
-          <div class="sec-title">
-              <div class="title">Projets d'étude</div>
-              <h2 style="font-family: 'Typo-Grotesk-Regulier'; font-weight: 500">We are woodex offer any posible carpentry and carpentry administrations you may require we  finding the correct answer for each circumstance, and are not prevented by a little test</h2>
+  <div *ngIf="researchProjects.length > 0" class="auto-container">
+    <div class="sec-title">
+      <div class="title">Projets d'étude</div>
+      <h2 style="font-family: 'Typo-Grotesk-Regulier'; font-weight: 500">
+        En plus des projets, l’INAT Junior Entreprise offre de réaliser des
+        études pour ses clients Que ce soit des études de faisabilité de
+        projet, des études de marché, de notoriété… l'équipe études de l’INAT
+        Junior Entreprise se charge d'établir une étude approfondie des offres,
+        du marché, des risques probables et de rédiger un rapport complet
+        contenant une analyse détaillée de toutes les données en question
+      </h2>
+    </div>
+    <div class="row clearfix">
+      <div
+        *ngFor="let project of researchProjects"
+        class="services-block-five col-md-4 col-sm-6 col-xs-12"
+      >
+        <div class="inner-box">
+          <div class="image">
+            <img
+              src="../../../assets/images/projets/affiche{{ project.image }}"
+              alt=""
+            />
+            <div class="overlay">
+              <a
+                routerLink="/projects/{{ project.id }}"
+                class="theme-btn btn-style-two"
+                >Lire la suite</a
+              >
+            </div>
           </div>
-          <div class="row clearfix">
-              <div *ngFor="let project of projects" class="services-block-five col-md-4 col-sm-6 col-xs-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <img src="../../../assets/images/projets/affiche{{project.image}}" alt="">
-                          <div class="overlay">
-                            <a routerLink="/projects/{{project.id}}" class="theme-btn btn-style-two">Lire la suite</a>
-                          </div>
-                      </div>
-                      <div class="lower-box">
-                        <h3><a routerLink="/projects/{{project.id}}">{{project.title}}</a></h3>
-                      </div>
-                  </div>
-              </div>
+          <div class="lower-box">
+            <h3>
+              <a routerLink="/projects/{{ project.id }}">{{ project.title }}</a>
+            </h3>
           </div>
-      </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

@@ -23,6 +23,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { SliderComponent } from './components/slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ActualitesComponent } from './components/actualites/actualites.component';
+import { NewsComponent } from './components/news/news.component';
+import { NewsDetailsComponent } from './components/news/news-details/news-details.component';
 
 const routes: Routes = [
   {path: '' , component: HomeComponent},
@@ -36,6 +38,8 @@ const routes: Routes = [
   {path: 'contact' , component: ContactComponent},
   {path: 'aboutUs' , component: AboutUsComponent},
   {path: 'sponsors' , component: SponsorsPartenaireComponent},
+  {path: 'news' , component: NewsComponent},
+  {path: 'news/:id' , component: NewsDetailsComponent},
   {path: 'structure' , component: StructureComponent},
   {path: 'rse' , component: RseComponent},
 
@@ -61,7 +65,9 @@ const routes: Routes = [
     DetailsProjectComponent,
     DetailsFormationComponent,
     SliderComponent,
-    ActualitesComponent
+    ActualitesComponent,
+    NewsComponent,
+    NewsDetailsComponent
   ],
   imports: [
     NgxPaginationModule,

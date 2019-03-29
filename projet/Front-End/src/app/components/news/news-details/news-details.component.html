@@ -1,0 +1,62 @@
+<div class="sidebar-page-container">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Content Side / Our Blog-->
+      <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+        <div class="blog-single padding-right">
+          <!--News Block Three-->
+          <div class="news-block-three style-two">
+            <div class="inner-box">
+              <div class="image">
+                <img src="../../../../assets/images/clients/3.png" alt="" />
+              </div>
+              <div class="lower-content">
+                <div class="upper-box clearfix">
+                  <div class="posted-date pull-left">{{date}}</div>
+                </div>
+                <div class="lower-box">
+                  <h3>{{title}}</h3>
+                  <div class="text">
+                    <p>
+                      {{shortDescription}}
+                    </p>
+                    <h4>Two Column Text Sample</h4>
+                    <p>
+                      {{longDescription}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Sidebar Side-->
+      <div class="sidebar-side col-lg-3 col-md-4 col-sm-12 col-xs-12">
+        <aside class="sidebar default-sidebar">
+          <!-- Popular Posts -->
+          <div class="sidebar-widget popular-posts">
+            <div class="sidebar-title"><h2>Actualités Eécentes</h2></div>
+
+            <article  *ngFor="let newss of news" class="post">
+              <figure class="post-thumb">
+                <a routerLink="/news/{{ newss.id }}"
+                  ><img
+                  src="../../../assets/images/news/{{ newss.img }}"
+                    alt=""
+                /></a>
+              </figure>
+              <div class="text">
+                <a routerLink="/news/{{ newss.id }}"
+                  >{{ newss.name }}...</a
+                >
+              </div>
+              <div class="post-info">{{ newss.date }}</div>
+            </article>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>

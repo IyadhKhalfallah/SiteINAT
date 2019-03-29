@@ -6,12 +6,11 @@ import { Injectable } from '@angular/core';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-
-
+const apiUrl = 'http://localhost:8080/news';
 @Injectable({
   providedIn: 'root'
 })
-export class PhotosService {
+export class NewService {
 
   constructor(private http: HttpClient) { }
 
@@ -26,7 +25,7 @@ export class PhotosService {
         `Backend returned code ${error.status}, ` +
         `body was: ${error.error}`);
     }
-    // return an observable with a Formation-facing error message
+    // return an observable with a News-facing error message
     return throwError('Something bad happened; please try again later.');
   }
 
@@ -35,23 +34,37 @@ export class PhotosService {
     return body || { };
   }
 
-  getFormationsPhotos(eventid): Observable<any> {
-    return this.http.get('http://localhost:8080/eventphotos/' + eventid, httpOptions).pipe(
+  getNews(): Observable<any> {
+    return this.http.get(apiUrl, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
-  getProjetsPhotos(projectid): Observable<any> {
-    return this.http.get('http://localhost:8080/projectphotos/' + projectid, httpOptions).pipe(
+  getOneNews(id: string): Observable<any> {
+    const url = apiUrl + id;
+    return this.http.get(url, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
-  getNewsPhotos(newsid): Observable<any> {
-    return this.http.get('http://localhost:8080/newsphotos/' + newsid, httpOptions).pipe(
-      map(this.extractData),
-      catchError(this.handleError));
-  }
+  // postNews(data): Observable<any> {
+  //   return this.http.post(apiUrl, data, httpOptions).pipe(
+  //     catchError(this.handleError)
+  //   );
+  // }
 
+  // updateNews(data, id): Observable<any> {
+  //   return this.http.put(`${apiUrl}/${id}`, data, httpOptions)
+  //     .pipe(
+  //       catchError(this.handleError)
+  //     );
+  // }
 
+  // deleteNews(id: string): Observable<{}> {
+  //   const url = `${apiUrl}/${id}`;
+  //   return this.http.delete(url, httpOptions)
+  //     .pipe(
+  //       catchError(this.handleError)
+  //     );
+  // }
 }

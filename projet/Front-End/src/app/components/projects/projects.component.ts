@@ -9,7 +9,8 @@ import { PhotosService } from 'src/app/services/photos.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects = [];
+  academicProjects = [];
+  researchProjects = [];
 
   constructor(private projectService: ProjectsService, private photoService: PhotosService) { }
 
@@ -20,12 +21,17 @@ export class ProjectsComponent implements OnInit {
           this.photoService
             .getProjetsPhotos(element.projectid)
             .subscribe(photos => {
+              console.log(photos);
               const project = {
                 id: element.projectid,
                 title: element.name,
                 image: photos[0].path
               };
-              this.projects.push(project);
+              if (element.academic) {
+                this.academicProjects.push(project);
+              } else {
+                this.researchProjects.push(project);
+              }
             });
         });
       }
