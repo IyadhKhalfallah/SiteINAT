@@ -25,6 +25,10 @@ public class ArticleBusiness {
         return articleRepository.getOne(id);
     }
 
+    public List<Article> getAllArticles(){
+        return articleRepository.findAll();
+    }
+
     public void deleteArticle(Article article){
         List<ArticlePhoto> photos = article.getArticlephotos();
         Iterator<ArticlePhoto> iterp = photos.iterator();

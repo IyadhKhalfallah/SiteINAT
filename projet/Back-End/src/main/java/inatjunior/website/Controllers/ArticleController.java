@@ -23,6 +23,12 @@ public class ArticleController {
         return articleBusiness.getArticle(id);
     }
 
+    @GetMapping(value = "/article/all")
+    public List<Article> getArticle(){
+
+        return articleBusiness.getAllArticles();
+    }
+
     @DeleteMapping(value = "/article/{id}")
     public void deleteArticle(@PathVariable("id") long id){
         Article e = articleBusiness.getArticle(id);
