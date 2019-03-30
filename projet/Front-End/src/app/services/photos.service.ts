@@ -48,7 +48,7 @@ export class PhotosService {
   }
 
   getNewsPhotos(newsid): Observable<any> {
-    return this.http.get('http://localhost:8080/newsphotos/' + newsid, httpOptions).pipe(
+    return this.http.get('http://localhost:8080/articlephotos/' + newsid, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }

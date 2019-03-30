@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = 'http://localhost:8080/news';
+const apiUrl = 'http://localhost:8080/article/';
 @Injectable({
   providedIn: 'root'
 })
@@ -35,7 +35,7 @@ export class NewService {
   }
 
   getNews(): Observable<any> {
-    return this.http.get(apiUrl, httpOptions).pipe(
+    return this.http.get(apiUrl + 'all', httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }

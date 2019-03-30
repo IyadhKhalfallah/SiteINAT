@@ -42,20 +42,21 @@ export class NewsDetailsComponent implements OnInit {
     // });
 
     // get one news
-  //   this.route.params.subscribe(params => {
-  //     this.newsService.getOneNews(params['id']).subscribe(data => {
-  //       if (data) {
-  //           this.photoService
-  //             .getNewsPhotos(params['id'])
-  //             .subscribe(photos => {
-  //                 this.image = photos[0].path;
-  //                 this.title = data.name;
-  //                 this.longDescription = data.description;
-  //                 this.date = data.date;
-  //             });
-  //       }
-  //     });
-  //  });
+     this.route.params.subscribe(params => {
+       this.newsService.getOneNews(params['id']).subscribe(data => {
+         console.log(data);
+         if (data) {
+             this.photoService
+               .getNewsPhotos(params['id'])
+               .subscribe(photos => {
+                   this.image = photos[0].path;
+                   this.title = data.name;
+                   this.longDescription = data.description;
+                   this.date = data.date;
+               });
+         }
+       });
+    });
 
   }
 

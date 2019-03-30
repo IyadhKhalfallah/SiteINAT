@@ -21,7 +21,6 @@ export class ProjectsComponent implements OnInit {
           this.photoService
             .getProjetsPhotos(element.projectid)
             .subscribe(photos => {
-              console.log(photos);
               const project = {
                 id: element.projectid,
                 title: element.name,

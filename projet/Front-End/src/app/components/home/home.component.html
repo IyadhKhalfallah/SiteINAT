@@ -1,135 +1,5 @@
 <app-slider></app-slider>
 
-<!-- Event Section -->
-<section class="news-section grey-bg">
-  <div class="auto-container">
-    <div class="sec-title-two" ><h2>Actualités</h2></div>
-    <div class="row clearfix">
-      <!--Column-->
-      <div class="column col-md-12 col-sm-12 col-xs-12">
-        <div class="row clearfix">
-          <!--News Block-->
-          <div
-            *ngFor="let newss of news"
-            class="news-block col-md-4 col-sm-4 col-xs-12"
-          >
-            <div class="inner-box">
-              <div class="image">
-                <img
-                  src="../../../assets/images/news/{{ newss.img }}"
-                  alt=""
-                />
-                <a routerLink="/news/{{ newss.id }}" class="overlay-link"></a>
-              </div>
-              <div class="lower-box">
-                <div class="text-center">
-                  <div class="post-date">{{ newss.date }}</div>
-                </div>
-                <h3>
-                  <a routerLink="/news/{{ newss.id }}">{{ newss.name }}</a>
-                </h3>
-                <div class="text">
-                  {{ newss.description }}
-                </div>
-                <a routerLink="/news/{{ newss.id }}" class="read-more"
-                  >Lire la suite</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--  Formation section -->
-<section class="services-section">
-  <div class="auto-container">
-    <!--Services Title-->
-    <div class="services-title">
-      <div class="title">Bienvenue dans nos formations</div>
-      <h2>
-        L'autre façon d'apprendre
-      </h2>
-    </div>
-    <div class="row clearfix">
-      <!--Services Block-->
-      <div
-        *ngFor="let formation of formations"
-        class="services-block col-md-3 col-sm-6 col-xs-12"
-      >
-        <div class="inner-box">
-          <div class="image">
-            <a routerLink="/formations/{{ formation.id }}"
-              ><img
-                src="../../../assets/images/formations/affiche/{{
-                  formation.img
-                }}"
-                alt=""
-            /></a>
-          </div>
-          <h3>
-            <a routerLink="/formations/{{ formation.id }}">{{
-              formation.name
-            }}</a>
-          </h3>
-        </div>
-      </div>
-    </div>
-    <div class="btn-box text-center">
-      <a routerLink="/formations" class="theme-btn btn-style-four"
-        >Lire tous les formations</a
-      >
-    </div>
-  </div>
-</section>
-
-
-<!--  Why us Section -->
-<section class="fluid-section-one">
-  <div class="outer-container clearfix">
-    <!--Image Column-->
-    <div
-      class="image-column"
-      style="background-image:url(../../../assets/images/background/BureauExecutif_2018-2019.jpg);"
-    ></div>
-    <!--Content Column-->
-    <div class="content-column">
-      <div class="inner-box">
-        <h2 style="font-family: 'Typo-Grotesk-Bold'">Nos Volets</h2>
-        <div class="column-text" style="font-family: 'Typo-Grotesk-Regulier'">
-          L'INAT Junior Entreprise fonctionne sur le modèle d'une entreprise à
-          services agronomiques
-          <br />
-          Notre stratégie repose sur trois volets principaux, à savoir :
-        </div>
-
-        <!--Accordian Box-->
-        <ul class="accordion-box style-two">
-          <!--Block-->
-          <li *ngFor="let value of values" class="accordion block active-block">
-            <div class="acc-btn active">
-              <div class="icon-outer">
-                <span class="icon icon-plus fa fa-plus"></span>
-                <span class="icon icon-minus fa fa-minus"></span>
-              </div>
-              {{ value.title }}
-            </div>
-            <div class="acc-content current">
-              <div class="content">
-                <div class="text">
-                  {{ value.description }}
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Project section -->
 <section class="project-section style-two" style="margin-top: 0rem;">
   <div class="auto-container">
@@ -214,29 +84,49 @@
   </div>
 </section>
 
-<!--  Counter -->
-<div class="fact-counter-section" style="background-color: black">
-  <div class="fact-counter">
-    <div class="auto-container">
-      <div class="row clearfix">
-        <!--Column-->
-        <div
-          *ngFor="let counter of counters"
-          class="column counter-column col-md-3 col-sm-6 col-xs-12"
-        >
-          <div class="inner">
-            <div class="count-outer count-box counted">
-              <span class="count-text" data-speed="2000" data-stop="12">{{
-                counter.nb
-              }}</span>
-            </div>
-            <h4 class="counter-title">{{ counter.title }}</h4>
-          </div>
+<!--  Why us Section -->
+<section class="fluid-section-one">
+  <div class="outer-container clearfix">
+    <!--Image Column-->
+    <div
+      class="image-column"
+      style="background-image:url(../../../assets/images/background/BureauExecutif_2018-2019.jpg);"
+    ></div>
+    <!--Content Column-->
+    <div class="content-column">
+      <div class="inner-box">
+        <h2 style="font-family: 'Typo-Grotesk-Bold'">Nos Volets</h2>
+        <div class="column-text" style="font-family: 'Typo-Grotesk-Regulier'">
+          L'INAT Junior Entreprise fonctionne sur le modèle d'une entreprise à
+          services agronomiques
+          <br />
+          Notre stratégie repose sur trois volets principaux, à savoir :
         </div>
+
+        <!--Accordian Box-->
+        <ul class="accordion-box style-two">
+          <!--Block-->
+          <li *ngFor="let value of values" class="accordion block active-block">
+            <div class="acc-btn active">
+              <div class="icon-outer">
+                <span class="icon icon-plus fa fa-plus"></span>
+                <span class="icon icon-minus fa fa-minus"></span>
+              </div>
+              {{ value.title }}
+            </div>
+            <div class="acc-content current">
+              <div class="content">
+                <div class="text">
+                  {{ value.description }}
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Event Section -->
 <section class="news-section grey-bg">
@@ -282,6 +172,116 @@
 </section>
 
 
+<!--  Counter -->
+<div class="fact-counter-section" style="background-color: black">
+  <div class="fact-counter">
+    <div class="auto-container">
+      <div class="row clearfix">
+        <!--Column-->
+        <div
+          *ngFor="let counter of counters"
+          class="column counter-column col-md-3 col-sm-6 col-xs-12"
+        >
+          <div class="inner">
+            <div class="count-outer count-box counted">
+              <span class="count-text" data-speed="2000" data-stop="12">{{
+                counter.nb
+              }}</span>
+            </div>
+            <h4 class="counter-title">{{ counter.title }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--  Formation section -->
+<section class="services-section">
+  <div class="auto-container">
+    <!--Services Title-->
+    <div class="services-title">
+      <div class="title">Bienvenue dans nos formations</div>
+      <h2>
+        L'autre façon d'apprendre
+      </h2>
+    </div>
+    <div class="row clearfix">
+      <!--Services Block-->
+      <div
+        *ngFor="let formation of formations"
+        class="services-block col-md-3 col-sm-6 col-xs-12"
+      >
+        <div class="inner-box">
+          <div class="image">
+            <a routerLink="/formations/{{ formation.id }}"
+              ><img
+                src="../../../assets/images/formations/affiche/{{
+                  formation.img
+                }}"
+                alt=""
+            /></a>
+          </div>
+          <h3>
+            <a routerLink="/formations/{{ formation.id }}">{{
+              formation.name
+            }}</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="btn-box text-center">
+      <a routerLink="/formations" class="theme-btn btn-style-four"
+        >Lire tous les formations</a
+      >
+    </div>
+  </div>
+</section>
+
+
+<!-- News Section -->
+<section class="news-section grey-bg">
+  <div class="auto-container">
+    <div class="sec-title-two" ><h2>Actualités</h2></div>
+    <div class="row clearfix">
+      <!--Column-->
+      <div class="column col-md-12 col-sm-12 col-xs-12">
+        <div class="row clearfix">
+          <!--News Block-->
+          <div
+            *ngFor="let newss of news"
+            class="news-block col-md-4 col-sm-4 col-xs-12"
+          >
+            <div class="inner-box">
+              <div class="image">
+                <img
+                  src="../../../assets/images/news/{{ newss.img }}"
+                  alt=""
+                />
+                <a routerLink="/news/{{ newss.id }}" class="overlay-link"></a>
+              </div>
+              <div class="lower-box">
+                <div class="text-center">
+                  <div class="post-date">{{ newss.date }}</div>
+                </div>
+                <h3>
+                  <a routerLink="/news/{{ newss.id }}">{{ newss.name }}</a>
+                </h3>
+                <div class="text">
+                  {{ newss.description }}
+                </div>
+                <a routerLink="/news/{{ newss.id }}" class="read-more"
+                  >Lire la suite</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
