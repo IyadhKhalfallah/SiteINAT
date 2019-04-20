@@ -10,31 +10,28 @@ import { PhotosService } from 'src/app/services/photos.service';
 export class NewsComponent implements OnInit {
 
   p = 1; // current page
-  news = [
-    // tslint:disable-next-line:max-line-length
-    {id: 1, date: '14-11-2018', title: 'news 1', description: 'description new 1', image: 'affiche/forum-6Affiche.jpg'},
-  ];
+  news = [];
   constructor(private newsService: NewService, private photoService: PhotosService) { }
 
   ngOnInit() {
-     this.newsService.getNews().subscribe(data => {
-       if (data) {
-         for (let i = 0; i < 4; i++) {
-           this.photoService
-             .getNewsPhotos(data[i].newsid)
-             .subscribe(photos => {
-                 const news = {
-                   id: data[i].newsid,
-                   title: data[i].name,
-                   description: data[i].description,
-                   date: data[i].date,
-                   image: data[i].path
-                 };
-                 this.news.push(news);
-             });
-         }
-       }
-     });
-    }
+    this.newsService.getNews().subscribe(data => {
+      if (data) {
+        for (let i = 0; i < 4; i++) {
+          this.photoService
+            .getNewsPhotos(data[i].articleid)
+            .subscribe(photos => {
+              const news = {
+                id: data[i].articleid,
+                title: data[i].name,
+                description: data[i].shortdescription,
+                date: data[i].date.substr(0, 10),
+                image: photos[0].path
+              };
+              this.news.push(news);
+            });
+        }
+      }
+    });
+  }
 
 }

@@ -14,9 +14,7 @@
           <h2 style="font-family: 'Typo-Grotesk-Regulier'">
             Découvrez nos projets
           </h2>
-          <a routerLink="/projects" class="services-link"
-            >Lire tous les projets</a
-          >
+          <a routerLink="/projects" class="services-link">Lire tous les projets</a>
         </div>
         <div class="row clearfix">
           <!--Porfolio Tabs-->
@@ -25,46 +23,26 @@
             <div class="p-tabs-content">
               <!--Portfolio Tab / Active Tab-->
               <div class="p-tab active-tab" id="p-tab-1">
-                <div
-                  class="project-carousel-two owl-theme owl-carousel owl-loaded owl-drag"
-                >
+                <div class="project-carousel-two owl-theme owl-carousel owl-loaded owl-drag">
                   <div class="owl-stage-outer">
-                    <div
-                      class="owl-stage"
-                      style="transition: all 0.7s ease 0s;"
-                    >
-                      <div
-                        *ngFor="let project of projects"
-                        class="owl-item active"
-                        style="width: 283.5px; margin-right: 30px;"
-                      >
+                    <div class="owl-stage" style="transition: all 0.7s ease 0s;">
+                      <div *ngFor="let project of projects" class="owl-item active"
+                        style="width: 283.5px; margin-right: 30px;">
                         <div class="gallery-item-two">
                           <div class="inner-box">
                             <figure class="image-box">
-                              <img
-                                src="../../../assets/images/projets/affiche{{
+                              <img src="../../../assets/images/projets/affiche{{
                                   project.img
-                                }}"
-                                alt=""
-                              />
+                                }}" alt="" />
                               <!--Overlay Box-->
                               <div class="overlay-box">
                                 <div class="overlay-inner">
                                   <div class="content">
-                                    <a
-                                      routerLink="/projects/{{ project.id }}"
-                                      data-fancybox-group="example-gallery"
-                                      class="link lightbox-image"
-                                      ><span
-                                        class="icon flaticon-search-1"
-                                      ></span
-                                    ></a>
+                                    <a routerLink="/projects/{{ project.id }}" data-fancybox-group="example-gallery"
+                                      class="link lightbox-image"><span class="icon flaticon-search-1"></span></a>
                                   </div>
                                   <h3>
-                                    <a
-                                      routerLink="/projects/{{ project.id }}"
-                                      >{{ project.name }}</a
-                                    >
+                                    <a routerLink="/projects/{{ project.id }}">{{ project.name }}</a>
                                   </h3>
                                 </div>
                               </div>
@@ -88,10 +66,8 @@
 <section class="fluid-section-one">
   <div class="outer-container clearfix">
     <!--Image Column-->
-    <div
-      class="image-column"
-      style="background-image:url(../../../assets/images/background/BureauExecutif_2018-2019.jpg);"
-    ></div>
+    <div class="image-column"
+      style="background-image:url(../../../assets/images/background/BureauExecutif_2018-2019.jpg);"></div>
     <!--Content Column-->
     <div class="content-column">
       <div class="inner-box">
@@ -131,22 +107,18 @@
 <!-- Event Section -->
 <section class="news-section grey-bg">
   <div class="auto-container">
-    <div class="sec-title-two" ><h2>Nos Evenements</h2></div>
+    <div class="sec-title-two">
+      <h2>Nos Evenements</h2>
+    </div>
     <div class="row clearfix">
       <!--Column-->
       <div class="column col-md-12 col-sm-12 col-xs-12">
         <div class="row clearfix">
           <!--News Block-->
-          <div
-            *ngFor="let event of events"
-            class="news-block col-md-4 col-sm-4 col-xs-12"
-          >
+          <div *ngFor="let event of events" class="news-block col-md-4 col-sm-4 col-xs-12">
             <div class="inner-box">
               <div class="image">
-                <img
-                  src="../../../assets/images/events/{{ event.img }}"
-                  alt=""
-                />
+                <img src="../../../assets/images/events/{{ event.img }}" alt="" />
                 <a routerLink="/events/{{ event.id }}" class="overlay-link"></a>
               </div>
               <div class="lower-box">
@@ -159,9 +131,7 @@
                 <div class="text">
                   {{ event.description }}
                 </div>
-                <a routerLink="/events/{{ event.id }}" class="read-more"
-                  >Lire la suite</a
-                >
+                <a routerLink="/events/{{ event.id }}" class="read-more">Lire la suite</a>
               </div>
             </div>
           </div>
@@ -178,10 +148,7 @@
     <div class="auto-container">
       <div class="row clearfix">
         <!--Column-->
-        <div
-          *ngFor="let counter of counters"
-          class="column counter-column col-md-3 col-sm-6 col-xs-12"
-        >
+        <div *ngFor="let counter of counters" class="column counter-column col-md-3 col-sm-6 col-xs-12">
           <div class="inner">
             <div class="count-outer count-box counted">
               <span class="count-text" data-speed="2000" data-stop="12">{{
@@ -209,19 +176,12 @@
     </div>
     <div class="row clearfix">
       <!--Services Block-->
-      <div
-        *ngFor="let formation of formations"
-        class="services-block col-md-3 col-sm-6 col-xs-12"
-      >
+      <div *ngFor="let formation of formations" class="services-block col-md-3 col-sm-6 col-xs-12">
         <div class="inner-box">
           <div class="image">
-            <a routerLink="/formations/{{ formation.id }}"
-              ><img
-                src="../../../assets/images/formations/affiche/{{
+            <a routerLink="/formations/{{ formation.id }}"><img src="../../../assets/images/formations/affiche/{{
                   formation.img
-                }}"
-                alt=""
-            /></a>
+                }}" alt="" /></a>
           </div>
           <h3>
             <a routerLink="/formations/{{ formation.id }}">{{
@@ -232,9 +192,7 @@
       </div>
     </div>
     <div class="btn-box text-center">
-      <a routerLink="/formations" class="theme-btn btn-style-four"
-        >Lire tous les formations</a
-      >
+      <a routerLink="/formations" class="theme-btn btn-style-four">Lire tous les formations</a>
     </div>
   </div>
 </section>
@@ -243,22 +201,18 @@
 <!-- News Section -->
 <section class="news-section grey-bg">
   <div class="auto-container">
-    <div class="sec-title-two" ><h2>Actualités</h2></div>
+    <div class="sec-title-two">
+      <h2>Actualités</h2>
+    </div>
     <div class="row clearfix">
       <!--Column-->
       <div class="column col-md-12 col-sm-12 col-xs-12">
         <div class="row clearfix">
           <!--News Block-->
-          <div
-            *ngFor="let newss of news"
-            class="news-block col-md-4 col-sm-4 col-xs-12"
-          >
+          <div *ngFor="let newss of news" class="news-block col-md-4 col-sm-4 col-xs-12">
             <div class="inner-box">
               <div class="image">
-                <img
-                  src="../../../assets/images/news/{{ newss.img }}"
-                  alt=""
-                />
+                <img src="../../../assets/images/news/{{ newss.img }}" alt="" />
                 <a routerLink="/news/{{ newss.id }}" class="overlay-link"></a>
               </div>
               <div class="lower-box">
@@ -266,14 +220,12 @@
                   <div class="post-date">{{ newss.date }}</div>
                 </div>
                 <h3>
-                  <a routerLink="/news/{{ newss.id }}">{{ newss.name }}</a>
+                  <a routerLink="/news/{{ newss.id }}">{{ newss.title }}</a>
                 </h3>
                 <div class="text">
                   {{ newss.description }}
                 </div>
-                <a routerLink="/news/{{ newss.id }}" class="read-more"
-                  >Lire la suite</a
-                >
+                <a routerLink="/news/{{ newss.id }}" class="read-more">Lire la suite</a>
               </div>
             </div>
           </div>
@@ -286,13 +238,12 @@
 
 
 <!--  Sponsors Section -->
-<section style="margin-bottom: 50px" >
-  <div class="slider" >
+<section style="margin-bottom: 50px">
+  <div class="slider">
     <div class="slide-track">
       <div class="slide" *ngFor="let sponsor of sponsors" style="margin-right: 15px;">
-        <img src="../../../assets/images/S/{{ sponsor.image }}" height="100" width="250" alt="" style=""/>
+        <img src="../../../assets/images/S/{{ sponsor.image }}" height="100" width="250" alt="" style="" />
       </div>
     </div>
   </div>
 </section>
-

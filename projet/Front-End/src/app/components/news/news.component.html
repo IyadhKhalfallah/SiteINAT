@@ -1,23 +1,22 @@
 <section class="page-title" style="background-image:url(../../../assets/images/events/Background.jpg)">
   <div class="auto-container">
-      <h1>ACTUALITÉS</h1>
-        <ul class="page-breadcrumb">
-          <li><a routerLink="/home">Accueil</a></li>
-            <li>Actualités</li>
-        </ul>
-    </div>
+    <h1>ACTUALITÉS</h1>
+    <ul class="page-breadcrumb">
+      <li><a routerLink="/home">Accueil</a></li>
+      <li>Actualités</li>
+    </ul>
+  </div>
 </section>
 
 <section class="news-page-section">
   <div class="auto-container">
     <div class="row clearfix">
       <!--News Block Three-->
-      <div *ngFor="let newss of news | paginate: { itemsPerPage: 3, currentPage: p }" class="news-block-three col-md-6 col-sm-6 col-xs-12">
+      <div *ngFor="let newss of news | paginate: { itemsPerPage: 3, currentPage: p }"
+        class="news-block-three col-md-6 col-sm-6 col-xs-12">
         <div class="inner-box">
           <div class="image">
-            <a routerLink="/news/{{newss.id}}"
-              ><img src="../../../assets/images/background/9.jpg" alt=""
-            /></a>
+            <a routerLink="/news/{{newss.id}}"><img src="../../../assets/images/news/{{newss.image}}" alt="" /></a>
           </div>
           <div class="lower-content">
             <div class="upper-box">
@@ -30,11 +29,7 @@
               <div class="text">
                 {{newss.description}}
               </div>
-              <a
-                routerLink="/news/{{newss.id}}"
-                class="theme-btn btn-style-four read-more"
-                >Lire la suite</a
-              >
+              <a routerLink="/news/{{newss.id}}" class="theme-btn btn-style-four read-more">Lire la suite</a>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@
           <div class="news-block-three style-two">
             <div class="inner-box">
               <div class="image">
-                <img src="../../../../assets/images/clients/3.png" alt="" />
+                <img src="../../../../assets/images/news/{{image}}" alt="" />
               </div>
               <div class="lower-content">
                 <div class="upper-box clearfix">
@@ -17,10 +17,6 @@
                 <div class="lower-box">
                   <h3>{{title}}</h3>
                   <div class="text">
-                    <p>
-                      {{shortDescription}}
-                    </p>
-                    <h4>Two Column Text Sample</h4>
                     <p>
                       {{longDescription}}
                     </p>
@@ -37,20 +33,17 @@
         <aside class="sidebar default-sidebar">
           <!-- Popular Posts -->
           <div class="sidebar-widget popular-posts">
-            <div class="sidebar-title"><h2>Actualités Eécentes</h2></div>
+            <div class="sidebar-title">
+              <h2>Actualités Récentes</h2>
+            </div>
 
-            <article  *ngFor="let newss of news" class="post">
-              <figure class="post-thumb">
-                <a routerLink="/news/{{ newss.id }}"
-                  ><img
-                  src="../../../assets/images/news/{{ newss.img }}"
-                    alt=""
-                /></a>
+            <article *ngFor="let newss of news" class="post">
+              <figure class="post-thumb" style="height: 5rem">
+                <a routerLink="/news/{{ newss.id }}"><img src="../../../assets/images/news/{{ newss.image }}" alt=""
+                     /></a>
               </figure>
               <div class="text">
-                <a routerLink="/news/{{ newss.id }}"
-                  >{{ newss.name }}...</a
-                >
+                <a routerLink="/news/{{ newss.id }}">{{ newss.name }}...</a>
               </div>
               <div class="post-info">{{ newss.date }}</div>
             </article>

@@ -1,7 +1,4 @@
-<section
-  class="page-title"
-  style="background-image:url(../../../assets/images/projets/Etudes.jpg)"
->
+<section class="page-title" style="background-image:url(../../../assets/images/projets/SlideProjet.jpg)">
   <div class="auto-container">
     <h1>PROJETS</h1>
     <ul class="page-breadcrumb">
@@ -12,7 +9,7 @@
 </section>
 
 <section class="services-page-section">
-  <div  *ngIf="academicProjects.length > 0" class="auto-container">
+  <div *ngIf="academicProjects.length > 0" class="auto-container">
     <!--Sec Title-->
     <div class="sec-title">
       <div class="title">Projets académique</div>
@@ -22,22 +19,12 @@
     </div>
     <div class="row clearfix">
       <!--Services Block Five-->
-      <div
-        *ngFor="let project of academicProjects"
-        class="services-block-five col-md-4 col-sm-6 col-xs-12"
-      >
+      <div *ngFor="let project of academicProjects" class="services-block-five col-md-4 col-sm-6 col-xs-12">
         <div class="inner-box">
           <div class="image">
-            <img
-              src="../../../assets/images/projets/affiche{{ project.image }}"
-              alt=""
-            />
+            <img src="../../../assets/images/projets/affiche{{ project.image }}" alt="" />
             <div class="overlay">
-              <a
-                routerLink="/projects/{{ project.id }}"
-                class="theme-btn btn-style-two"
-                >Lire la suite</a
-              >
+              <a routerLink="/projects/{{ project.id }}" class="theme-btn btn-style-two">Lire la suite</a>
             </div>
           </div>
           <div class="lower-box">
@@ -63,22 +50,12 @@
       </h2>
     </div>
     <div class="row clearfix">
-      <div
-        *ngFor="let project of researchProjects"
-        class="services-block-five col-md-4 col-sm-6 col-xs-12"
-      >
+      <div *ngFor="let project of researchProjects" class="services-block-five col-md-4 col-sm-6 col-xs-12">
         <div class="inner-box">
           <div class="image">
-            <img
-              src="../../../assets/images/projets/affiche{{ project.image }}"
-              alt=""
-            />
+            <img src="../../../assets/images/projets/affiche{{ project.image }}" alt="" />
             <div class="overlay">
-              <a
-                routerLink="/projects/{{ project.id }}"
-                class="theme-btn btn-style-two"
-                >Lire la suite</a
-              >
+              <a routerLink="/projects/{{ project.id }}" class="theme-btn btn-style-two">Lire la suite</a>
             </div>
           </div>
           <div class="lower-box">

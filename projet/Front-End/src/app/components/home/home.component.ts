@@ -13,17 +13,7 @@ declare var jQuery: any;
 export class HomeComponent implements OnInit {
   projects = [];
   formations = [];
-  news = [
-    {
-      id: 1,
-      img: 'affiche/forum-6Affiche.jpg',
-      date: '14-11-2018',
-      name: 'News 1',
-      description:
-        // tslint:disable-next-line:max-line-length
-        'Description News 1'
-    }
-  ];
+  news = [];
   events = [
     // tslint:disable-next-line:max-line-length
     {
@@ -100,7 +90,7 @@ export class HomeComponent implements OnInit {
     private photoService: PhotosService,
     private formationService: FormationsService,
     private newsService: NewService
-  ) {}
+  ) { }
 
   ngOnInit() {
     // Projects
@@ -144,23 +134,23 @@ export class HomeComponent implements OnInit {
       }
     });
     // News
-    // this.newsService.getNews().subscribe(data => {
-    //   if (data) {
-    //     for (let i = 0; i < 4; i++) {
-    //       this.photoService
-    //         .getNewsPhotos(data[i].newsid)
-    //         .subscribe(photos => {
-    //             const news = {
-    //               id: data[i].newsid,
-    //               name: data[i].name,
-    //               description: data[i].description,
-    //               date: data[i].date,
-    //               img: data[i].path
-    //             };
-    //             this.news.push(news);
-    //         });
-    //     }
-    //   }
-    // });
+    this.newsService.getNews().subscribe(data => {
+      if (data) {
+        for (let i = 0; i < 4; i++) {
+          this.photoService
+            .getNewsPhotos(data[i].articleid)
+            .subscribe(photos => {
+              const news = {
+                id: data[i].articleid,
+                title: data[i].name,
+                description: data[i].shortdescription,
+                date: data[i].date.substr(0, 10),
+                image: photos[0].path
+              };
+              this.news.push(news);
+            });
+        }
+      }
+    });
   }
 }
