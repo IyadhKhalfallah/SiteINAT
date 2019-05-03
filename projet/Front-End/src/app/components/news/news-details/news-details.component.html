@@ -7,7 +7,7 @@
           <!--News Block Three-->
           <div class="news-block-three style-two">
             <div class="inner-box">
-              <div class="image">
+              <div *ngIf="image" class="image">
                 <img src="../../../../assets/images/news/{{image}}" alt="" />
               </div>
               <div class="lower-content">
@@ -39,8 +39,8 @@
 
             <article *ngFor="let newss of news" class="post">
               <figure class="post-thumb" style="height: 5rem">
-                <a routerLink="/news/{{ newss.id }}"><img src="../../../assets/images/news/{{ newss.image }}" alt=""
-                     /></a>
+                <a routerLink="/news/{{ newss.id }}"><img src="../../../assets/images/news/{{ newss.image }}"
+                    alt="" /></a>
               </figure>
               <div class="text">
                 <a routerLink="/news/{{ newss.id }}">{{ newss.name }}...</a>

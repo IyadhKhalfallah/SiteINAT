@@ -28,10 +28,10 @@ export class HomeComponent implements OnInit {
   ];
 
   counters = [
-    { nb: 120, title: 'title1' },
-    { nb: 132, title: 'title2' },
-    { nb: 152, title: 'title3' },
-    { nb: 121, title: 'title4' }
+    { nb: 40, title: 'Juniors Entreprises' },
+    { nb: 10, title: 'Projets' },
+    { nb: 12, title: 'Formations' },
+    { nb: 2, title: 'Labels' }
   ];
 
   values = [
@@ -136,19 +136,22 @@ export class HomeComponent implements OnInit {
     // News
     this.newsService.getNews().subscribe(data => {
       if (data) {
+        // It was just 1 news that's why i in range 1
         for (let i = 0; i < 4; i++) {
-          this.photoService
-            .getNewsPhotos(data[i].articleid)
-            .subscribe(photos => {
-              const news = {
-                id: data[i].articleid,
-                title: data[i].name,
-                description: data[i].shortdescription,
-                date: data[i].date.substr(0, 10),
-                image: photos[0].path
-              };
-              this.news.push(news);
-            });
+          if (data[i]) {
+            this.photoService
+              .getNewsPhotos(data[i].articleid)
+              .subscribe(photos => {
+                const news = {
+                  id: data[i].articleid,
+                  title: data[i].name,
+                  description: data[i].shortdescription,
+                  date: data[i].date.substr(0, 10),
+                  image: photos[0].path
+                };
+                this.news.push(news);
+              });
+          }
         }
       }
     });

@@ -17,18 +17,20 @@ export class NewsComponent implements OnInit {
     this.newsService.getNews().subscribe(data => {
       if (data) {
         for (let i = 0; i < 4; i++) {
-          this.photoService
-            .getNewsPhotos(data[i].articleid)
-            .subscribe(photos => {
-              const news = {
-                id: data[i].articleid,
-                title: data[i].name,
-                description: data[i].shortdescription,
-                date: data[i].date.substr(0, 10),
-                image: photos[0].path
-              };
-              this.news.push(news);
-            });
+          if (data[i]) {
+            this.photoService
+              .getNewsPhotos(data[i].articleid)
+              .subscribe(photos => {
+                const news = {
+                  id: data[i].articleid,
+                  title: data[i].name,
+                  description: data[i].shortdescription,
+                  date: data[i].date.substr(0, 10),
+                  image: photos[0].path
+                };
+                this.news.push(news);
+              });
+          }
         }
       }
     });

@@ -151,7 +151,7 @@
         <div *ngFor="let counter of counters" class="column counter-column col-md-3 col-sm-6 col-xs-12">
           <div class="inner">
             <div class="count-outer count-box counted">
-              <span class="count-text" data-speed="2000" data-stop="12">{{
+              <span class="count-text" data-speed="2000" data-stop="12">+ {{
                 counter.nb
               }}</span>
             </div>
@@ -212,7 +212,7 @@
           <div *ngFor="let newss of news" class="news-block col-md-4 col-sm-4 col-xs-12">
             <div class="inner-box">
               <div class="image">
-                <img src="../../../assets/images/news/{{ newss.img }}" alt="" />
+                <img src="../../../assets/images/news/{{ newss.image }}" alt="" />
                 <a routerLink="/news/{{ newss.id }}" class="overlay-link"></a>
               </div>
               <div class="lower-box">

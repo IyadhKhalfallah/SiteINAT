@@ -5,11 +5,8 @@
       <div class="content-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="services-single">
           <div class="inner-box">
-            <div class="image">
-              <img
-                src="../../../../assets/../../../../assets/images/formations/affiche{{image}}"
-                alt=""
-              />
+            <div *ngIf="image" class="image">
+              <img src="../../../../assets/../../../../assets/images/formations/affiche{{image}}" alt="" />
             </div>
             <div class="lower-content">
               <h3>{{title}}</h3>
@@ -19,7 +16,8 @@
 
               <h3>Prérequis</h3>
               <div class="text">
-                <p>Forte volonté de s’impliquer personnellement et émotionnellement dans cette formation pour en tirer les meilleurs bénéfices.</p>
+                <p>Forte volonté de s’impliquer personnellement et émotionnellement dans cette formation pour en tirer
+                  les meilleurs bénéfices.</p>
               </div>
 
               <h3 *ngIf="programme">Le programme de la formation</h3>
@@ -36,34 +34,24 @@
                 <div class="auto-container">
                   <h3>Photos</h3>
                   <!--MixitUp Galery-->
-                  <div  class="mixitup-gallery">
+                  <div class="mixitup-gallery">
                     <div class="filter-list row clearfix" id="MixItUpB4E95B">
                       <!--Gallery Item Two-->
-                      <div
-                        class="gallery-item-two mix all col-lg-4 col-md-4 col-sm-6 col-xs-12"
-                        style="display: inline-block;"
-                        *ngFor="let image of gallery"
-                      >
+                      <div class="gallery-item-two mix all col-lg-4 col-md-4 col-sm-6 col-xs-12"
+                        style="display: inline-block;" *ngFor="let image of gallery">
                         <div class="inner-box">
                           <figure class="image-box">
-                            <img
-                            src="../../../../assets/images/formations/gallery{{
+                            <img src="../../../../assets/images/formations/gallery{{
                              image
-                            }}"
-                              alt=""
-                            />
+                            }}" alt="" />
                             <!--Overlay Box-->
                             <div class="overlay-box">
                               <div class="overlay-inner">
                                 <div class="content">
-                                  <a
-                                    href="../../../../assets/images/formations/gallery{{
+                                  <a href="../../../../assets/images/formations/gallery{{
                                       image
-                                    }}"
-                                    data-fancybox-group="example-gallery"
-                                    class="link lightbox-image"
-                                    ><span class="icon flaticon-search-1"></span
-                                  ></a>
+                                    }}" data-fancybox-group="example-gallery" class="link lightbox-image"><span
+                                      class="icon flaticon-search-1"></span></a>
                                 </div>
                               </div>
                             </div>

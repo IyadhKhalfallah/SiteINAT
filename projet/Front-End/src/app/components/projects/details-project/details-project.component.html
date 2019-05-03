@@ -6,7 +6,9 @@
         <aside class="sidebar default-sidebar">
           <!--Client-->
           <div class="sidebar-widget brochure-widget">
-            <div class="sidebar-title"><h2>Le Client</h2></div>
+            <div class="sidebar-title">
+              <h2>Le Client</h2>
+            </div>
             <!-- <div class="brochure-box">
               <div class="inner">
                 <span class="icon fa fa-file-pdf-o"></span>
@@ -43,11 +45,8 @@
       <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
         <div class="services-single">
           <div class="inner-box">
-            <div class="image">
-              <img
-                src="../../../../assets/../../../../assets/images/resource/{{image}}"
-                alt=""
-              />
+            <div *ngIf="image" class="image">
+              <img src="../../../../assets/../../../../assets/images/resource/{{image}}" alt="" />
             </div>
             <div class="lower-content">
               <h3>{{title}}</h3>
@@ -61,31 +60,21 @@
                   <div class="mixitup-gallery">
                     <div class="filter-list row clearfix" id="MixItUpB4E95B">
                       <!--Gallery Item Two-->
-                      <div
-                        class="gallery-item-two mix all col-lg-4 col-md-4 col-sm-6 col-xs-12"
-                        style="display: inline-block;"
-                        *ngFor="let image of demo"
-                      >
+                      <div class="gallery-item-two mix all col-lg-4 col-md-4 col-sm-6 col-xs-12"
+                        style="display: inline-block;" *ngFor="let image of demo">
                         <div class="inner-box">
-                          <figure class="image-box">
-                            <img
-                              src="../../../../assets/images/projets/gallery{{
+                          <figure *ngIf="image" class="image-box">
+                            <img src="../../../../assets/images/projets/gallery{{
                                 image
-                              }}"
-                              alt=""
-                            />
+                              }}" alt="" />
                             <!--Overlay Box-->
                             <div class="overlay-box">
                               <div class="overlay-inner">
                                 <div class="content">
-                                  <a
-                                    href="../../../../assets/images/projets/gallery{{
+                                  <a href="../../../../assets/images/projets/gallery{{
                                       image
-                                    }}"
-                                    data-fancybox-group="example-gallery"
-                                    class="link lightbox-image"
-                                    ><span class="icon flaticon-search-1"></span
-                                  ></a>
+                                    }}" data-fancybox-group="example-gallery" class="link lightbox-image"><span
+                                      class="icon flaticon-search-1"></span></a>
                                 </div>
                               </div>
                             </div>
