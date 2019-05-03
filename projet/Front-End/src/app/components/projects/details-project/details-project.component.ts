@@ -22,22 +22,24 @@ export class DetailsProjectComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.projectService.getProjet(params['id']).subscribe(data => {
         if (data) {
-            this.photoService
-              .getProjetsPhotos(params['id'])
-              .subscribe(photos => {
-                photos.forEach(element => {
+          this.photoService
+            .getProjetsPhotos(params['id'])
+            .subscribe(photos => {
+              photos.forEach(element => {
+                if (element.path !== '/Champignon.jpg') {
                   this.demo.push(element.path);
-                });
-                  this.client = {
-                    phone: data.client.phone, email: data.client.email, entreprise: data.client.name
-                  };
-                  this.title = data.name;
-                  this.description = data.description;
-
+                }
               });
+              this.client = {
+                phone: data.client.phone, email: data.client.email, entreprise: data.client.name
+              };
+              this.title = data.name;
+              this.description = data.description;
+
+            });
         }
       });
-   });
+    });
   }
 
 }
