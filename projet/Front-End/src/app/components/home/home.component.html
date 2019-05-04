@@ -108,7 +108,7 @@
 <section class="news-section grey-bg">
   <div class="auto-container">
     <div class="sec-title-two">
-      <h2>Nos Evenements</h2>
+      <h2>Nos Événements</h2>
     </div>
     <div class="row clearfix">
       <!--Column-->
@@ -169,7 +169,7 @@
   <div class="auto-container">
     <!--Services Title-->
     <div class="services-title">
-      <div class="title">Bienvenue dans nos formations</div>
+      <div class="title">Nos formations</div>
       <h2>
         L'autre façon d'apprendre
       </h2>
@@ -192,7 +192,7 @@
       </div>
     </div>
     <div class="btn-box text-center">
-      <a routerLink="/formations" class="theme-btn btn-style-four">Lire tous les formations</a>
+      <a routerLink="/formations" class="theme-btn btn-style-four">Lire toutes les formations</a>
     </div>
   </div>
 </section>
@@ -239,11 +239,15 @@
 
 <!--  Sponsors Section -->
 <section style="margin-bottom: 50px">
-  <div class="slider">
-    <div class="slide-track">
-      <div class="slide" *ngFor="let sponsor of sponsors" style="margin-right: 15px;">
-        <img src="../../../assets/images/S/{{ sponsor.image }}" height="100" width="250" alt="" style="" />
+
+  <a [routerLink]="['/sponsors']">
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide" *ngFor="let sponsor of sponsors" style="margin-right: 15px;">
+          <img src="../../../assets/images/S/{{ sponsor.image }}" height="100" width="250" alt="" style="" />
+        </div>
       </div>
     </div>
-  </div>
+  </a>
+
 </section>

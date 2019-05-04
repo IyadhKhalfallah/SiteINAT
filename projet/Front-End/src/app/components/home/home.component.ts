@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   ];
 
   counters = [
-    { nb: 40, title: 'Juniors Entreprises' },
+    { nb: 40, title: 'Junior Entrepreneurs' },
     { nb: 10, title: 'Projets' },
     { nb: 12, title: 'Formations' },
     { nb: 2, title: 'Labels' }
