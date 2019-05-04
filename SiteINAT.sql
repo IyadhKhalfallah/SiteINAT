@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Ven 03 Mai 2019 à 23:05
+-- Généré le :  Sam 04 Mai 2019 à 11:31
 -- Version du serveur :  5.7.26-0ubuntu0.18.04.1
 -- Version de PHP :  7.2.17-0ubuntu0.18.04.1
 
@@ -300,8 +300,7 @@ INSERT INTO `project_photo` (`photoid`, `path`, `project_projectid`) VALUES
 (5, '/Champignon.jpg', 11),
 (4, '/mur vegetal.jpg', 10),
 (7, '/Champignon1.jpg', 11),
-(8, '/StationBioclimatologique .jpg', 12),
-(19, '/StationBioclimatologique .jpg', 12);
+(8, '/StationBioclimatologique .jpg', 12);
 
 -- --------------------------------------------------------
 
