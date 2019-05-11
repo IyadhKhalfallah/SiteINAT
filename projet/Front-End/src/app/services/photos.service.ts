@@ -36,19 +36,19 @@ export class PhotosService {
   }
 
   getFormationsPhotos(eventid): Observable<any> {
-    return this.http.get('http://localhost:8080/eventphotos/' + eventid, httpOptions).pipe(
+    return this.http.get('http://inatjunior.tn:8080/eventphotos/' + eventid, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
   getProjetsPhotos(projectid): Observable<any> {
-    return this.http.get('http://localhost:8080/projectphotos/' + projectid, httpOptions).pipe(
+    return this.http.get('http://inatjunior.tn:8080/projectphotos/' + projectid, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
   getNewsPhotos(newsid): Observable<any> {
-    return this.http.get('http://localhost:8080/articlephotos/' + newsid, httpOptions).pipe(
+    return this.http.get('http://inatjunior.tn:8080/articlephotos/' + newsid, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }

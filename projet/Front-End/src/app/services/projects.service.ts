@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = 'http://localhost:8080/projects';
+const apiUrl = 'http://inatjunior.tn:8080/projects';
 @Injectable({
   providedIn: 'root'
 })
@@ -41,7 +41,7 @@ export class ProjectsService {
   }
 
   getProjet(id: string): Observable<any> {
-    const url = 'http://localhost:8080/project/' + id;
+    const url = 'http://inatjunior.tn:8080/project/' + id;
     return this.http.get(url, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));

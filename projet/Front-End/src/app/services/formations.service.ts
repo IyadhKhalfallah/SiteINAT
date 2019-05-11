@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = 'http://localhost:8080/trainings';
+const apiUrl = 'http://inatjunior.tn:8080/trainings';
 
 @Injectable({
   providedIn: 'root'
@@ -42,7 +42,7 @@ export class FormationsService {
   }
 
   getFormation(id: string): Observable<any> {
-    const url = 'http://localhost:8080/training/' + id;
+    const url = 'http://inatjunior.tn:8080/training/' + id;
     return this.http.get(url, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
