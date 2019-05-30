@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NewService } from 'src/app/services/new.service';
 import { ActivatedRoute } from '@angular/router';
 import { PhotosService } from 'src/app/services/photos.service';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-news-details',
@@ -18,7 +19,7 @@ export class NewsDetailsComponent implements OnInit {
   gallery: string[];
   news = [];
 
-  constructor(private newsService: NewService, private route: ActivatedRoute, private photoService: PhotosService) { }
+  constructor(private newsService: NewService, private route: ActivatedRoute, private photoService: PhotosService, private meta: Meta) { }
 
   ngOnInit() {
     // All the news
@@ -55,11 +56,40 @@ export class NewsDetailsComponent implements OnInit {
               this.longDescription = data.longdescription;
               this.shortDescription = data.shortdescription;
               this.date = data.date.substr(0, 10);
+                this.meta.updateTag({ name: 'fbTitle', content: this.title });
+                this.meta.updateTag({ name: 'fbDescription', content: this.shortDescription });
+                this.meta.updateTag({ name: 'fbImage', content: 'http://inatjunior.tn/assets/images/news/'+this.image});
             });
         }
       });
     });
 
+
+
+      this.meta.updateTag({ name: 'fbTitle', content: this.title });
+      this.meta.updateTag({ name: 'fbDescription', content: this.shortDescription });
+      this.meta.updateTag({ name: 'fbImage', content: 'http://inatjunior.tn/assets/images/news/'+this.image});
+  }
+
+  share(){
+      /*window.open('http://www.facebook.com/sharer.php?u='+window.location.href,
+          'sharer',
+          'toolbar=0,status=0,width=626,height=436,left=200');*/
+      let leftPosition, topPosition;
+      //Allow for borders.
+      leftPosition = (window.screen.width / 2) - ((626 / 2) + 10);
+      //Allow for title and status bars.
+      topPosition = (window.screen.height / 2) - ((436 / 2) + 50);
+      //Open the window.
+      window.open("http://www.facebook.com/sharer.php?u="+window.location.href,
+          "Partege sur Facebook",
+          "status=no,height=436," +
+          "width=626" +
+          ",resizable=yes,left="
+          + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY="
+          + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no");
+
+      return false;
   }
 
 }

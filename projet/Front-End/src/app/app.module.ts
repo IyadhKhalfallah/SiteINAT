@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ActualitesComponent } from './components/actualites/actualites.component';
 import { NewsComponent } from './components/news/news.component';
 import { NewsDetailsComponent } from './components/news/news-details/news-details.component';
+import { FacebookModule } from 'ngx-facebook';
 
 const routes: Routes = [
   {path: '' , component: HomeComponent},
@@ -74,7 +75,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+      FacebookModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
