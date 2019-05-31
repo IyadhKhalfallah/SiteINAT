@@ -89,8 +89,8 @@ export class NewsDetailsComponent implements OnInit {
       topPosition = (window.screen.height / 2) - ((436 / 2) + 50);
       //Open the window.
 
-      alert(this.meta.getTag('name=fbTitle').content);
-      alert(this.meta.getTag('name=fbDescription').content);
+      //alert(this.meta.getTag('name=fbTitle').content);
+      //alert(this.meta.getTag('name=fbDescription').content);
 
       window.open("http://www.facebook.com/sharer.php?href="+window.location.href,
           "Partege sur Facebook",
