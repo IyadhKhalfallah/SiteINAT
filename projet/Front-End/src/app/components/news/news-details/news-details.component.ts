@@ -12,10 +12,10 @@ import { Meta } from '@angular/platform-browser';
 export class NewsDetailsComponent implements OnInit {
 
   image: string;
-  title = 'title';
-  date = '2018-05-05';
-  shortDescription = 'short desc';
-  longDescription = 'long desc';
+  title ;
+  date  ;
+  shortDescription  ;
+  longDescription ;
   gallery: string[];
   news = [];
 
@@ -56,19 +56,26 @@ export class NewsDetailsComponent implements OnInit {
               this.longDescription = data.longdescription;
               this.shortDescription = data.shortdescription;
               this.date = data.date.substr(0, 10);
-                this.meta.updateTag({ name: 'fbTitle', content: this.title });
-                this.meta.updateTag({ name: 'fbDescription', content: this.shortDescription });
-                this.meta.updateTag({ name: 'fbImage', content: 'http://inatjunior.tn/assets/images/news/'+this.image});
+                //console.log(data.name+" data.name");
+                if(data.name) {
+                    this.meta.updateTag({name: 'fbTitle', content: data.name});
+                     this.meta.updateTag({name: 'fbDescription', content: data.shortdescription});
+                    this.meta.updateTag({name: 'fbImage', content: 'http://inatjunior.tn/assets/images/news/' + photos[0].path});
+                    this.meta.updateTag({property: 'og:url', content: window.location.href});
+                }
             });
         }
       });
     });
 
-
-
-      this.meta.updateTag({ name: 'fbTitle', content: this.title });
-      this.meta.updateTag({ name: 'fbDescription', content: this.shortDescription });
-      this.meta.updateTag({ name: 'fbImage', content: 'http://inatjunior.tn/assets/images/news/'+this.image});
+//console.log(this.title+" this.title after update");
+    if(this.title) {
+        this.meta.updateTag({name: 'fbTitle', content: this.title});
+        //console.log(this.meta.getTag('name=fbTitle').content);
+        this.meta.updateTag({name: 'fbDescription', content: this.shortDescription});
+        this.meta.updateTag({name: 'fbImage', content: 'http://inatjunior.tn/assets/images/news/' + this.image});
+        this.meta.updateTag({property:'og:url', content:window.location.href});
+    }
   }
 
   share(){
@@ -81,7 +88,11 @@ export class NewsDetailsComponent implements OnInit {
       //Allow for title and status bars.
       topPosition = (window.screen.height / 2) - ((436 / 2) + 50);
       //Open the window.
-      window.open("http://www.facebook.com/sharer.php?u="+window.location.href,
+
+      alert(this.meta.getTag('name=fbTitle').content);
+      alert(this.meta.getTag('name=fbDescription').content);
+
+      window.open("http://www.facebook.com/sharer.php?href="+window.location.href,
           "Partege sur Facebook",
           "status=no,height=436," +
           "width=626" +

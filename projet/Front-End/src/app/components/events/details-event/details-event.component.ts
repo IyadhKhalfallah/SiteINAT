@@ -29,11 +29,13 @@ export class DetailsEventComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     this.gallery = ['gallery/forum-6-1.jpg', 'gallery/forum-6-2.jpg', 'gallery/forum-6-3.jpg', 'gallery/forum-6-4.jpg', 'gallery/forum-6-5.jpg', 'gallery/forum-6-6.jpg', 'gallery/forum-6-7.jpg', 'gallery/forum-6-8.jpg', 'gallery/forum-6-9.jpg', 'gallery/forum-6-10.jpg'];
 
-
-      this.meta.updateTag({ name: 'fbTitle', content: this.title });
-      this.meta.updateTag({ name: 'fbDescription', content: this.shortDescription });
-      this.meta.updateTag({ name: 'fbImage', content: 'http://inatjunior.tn/assets/images/events/'+this.image});
-
+if(this.title) {
+    this.meta.updateTag({name: 'fbTitle', content: this.title});
+    //console.log(this.meta.getTag('name=fbTitle').content);
+    this.meta.updateTag({name: 'fbDescription', content: this.shortDescription});
+    this.meta.updateTag({name: 'fbImage', content: 'http://inatjunior.tn/assets/images/events/' + this.image});
+    this.meta.updateTag({property: 'og:url', content: window.location.href});
+}
   }
 
    share(){
